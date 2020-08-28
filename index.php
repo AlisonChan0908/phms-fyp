@@ -3,7 +3,7 @@
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: dashboard/production/SignupSignin/signin.php');
+  	header('location: login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
