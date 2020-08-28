@@ -1,0 +1,1021 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+/**
+ * ApiMedic.com Sample Avatar, a demo implementation of the ApiMedic.com Symptom Checker by priaid Inc, Switzerland
+ * 
+ * Copyright (C) 2012 priaid inc, Switzerland
+ * 
+ * This file is part of The Sample Avatar.
+ * 
+ * This is free implementation: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License Version 3 as published by the Free Software Foundation.
+ * 
+ * The ApiMedic.com Sample Avatar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU General Public License for more details. You should have received a copy of the GNU
+ * General Public License along with ApiMedic.com. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Authors: priaid inc, Switzerland
+ */
+ -->
+<head>
+    <title>PHMS | General Practice</title>
+    <link rel="icon" href="../../../images/PHMS.jpg" type="image/ico" />
+    <link rel="stylesheet" type="text/css" href="../symptom_selector/selector.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../symptom_selector/fontawesome/assets/css/font-awesome.min.css" /> 
+    <script src="../libs/jquery-1.12.2.min.js"></script>
+    <script src="../libs/json2.js"></script><!-- json for ie7 -->
+    <script src="../libs/jquery.imagemapster.min.js?v=1.1"></script>
+    <script src="../libs/typeahead.bundle.js"></script>
+    
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-color:#aaa;border-spacing:0;}
+        .tg td{background-color:#fff;border-bottom-width:1px;border-color:#aaa;border-style:solid;border-top-width:1px;
+          border-width:0px;color:#333;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;
+          word-break:normal;}
+        .tg th{background-color:#f38630;border-bottom-width:1px;border-color:#aaa;border-style:solid;border-top-width:1px;
+          border-width:0px;color:#fff;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;
+          padding:10px 5px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        .tg .tg-dg7a{background-color:#FCFBE3;text-align:left;vertical-align:top}
+    </style>
+</head>
+<body>
+
+    <table class="container-table">
+        <tr>
+            <td valign="middle" class="td-header bordered-box box-white width25"><h4 class="header" id="treatingSpecialistTitle">Treating specialist<span class="badge pull-left badge-primary visible-lg margin5R"></span></h4></td>
+        </tr>
+		<tr>
+		      <td valign="top" class="selector_container bordered-box box-white width25">General practice
+        </br><h2>
+                <a href="#Johor">Johor</a> </br>
+                <a href="#Kedah">Kedah</a> </br>
+                <a href="#Kelantan">Kelantan</a> </br>
+                <a href="#Melaka">Melaka</a> </br>
+                <a href="#Negeri Sembilan">Negeri Sembilan</a> </br>
+                <a href="#Pahang">Pahang</a> </br>
+                <a href="#Perak">Perak</a> </br>
+                <a href="#Perlis">Perlis</a> </br>
+                <a href="#Perak">Pulau Pinang</a> </br>
+                <a href="#Sabah">Sabah</a> </br>
+                <a href="#Sarawak">Sarawak</a> </br>
+                <a href="#Selangor">Selangor</a> </br>
+                <a href="#Terengganu">Terengganu</a> </br>
+                <a href="#Wilayah Persekutuan Kuala Lumpur">Wilayah Persekutuan Kuala Lumpur</a> </br>
+            </h2>
+        <div id="specialistTitle"></div></td>
+        </tr>
+        
+    </table>
+  
+        <table class="tg" >
+            <h2 id="Johor">Johor</h2>  
+        <thead>
+          <tr>
+            <th class="tg-0lax">Physician</th>
+            <th class="tg-0lax">Qualifications</th>
+            <th class="tg-0lax">Clinic or Hospital Name</th>
+            <th class="tg-0lax">Address</th>
+            <th class="tg-0lax">Main Line</th>
+            <th class="tg-0lax">MMC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-dg7a">Dr. Adrian Choo</td>
+            <td class="tg-dg7a">M.B.B.S. (Melaka-Manipal Medical College)</td>
+            <td class="tg-dg7a">Klinik Choo</td>
+            <td class="tg-dg7a">33, Jalan Pulai 21,Taman Pulai Utama, Skudai Johor 81110 Malaysia</td>
+            <td class="tg-dg7a">07-5506991</td>
+            <td class="tg-dg7a">49719</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Dr Kok Kian Lee</td>
+            <td class="tg-0lax">M.D. Graduate Diploma Family Medicine (AFPM)</td>
+            <td class="tg-0lax">Klinik Lee</td>
+            <td class="tg-0lax">201 Jalan Simbang Taman Perling Johor Bahru Johor 81200 Malaysia</td>
+            <td class="tg-0lax">07-2376686</td>
+            <td class="tg-0lax">32127</td>
+          </tr>
+          <tr>
+            <td class="tg-dg7a">Tuan Hock Liew</td>
+            <td class="tg-dg7a">MBBS(UM)</td>
+            <td class="tg-dg7a">Klinik Liew &amp; Surgeri</td>
+            <td class="tg-dg7a">33, Jalan Sulam, Taman Sentosa, 33, Jalan Sulam, Taman Sentosa, Johor 80150 Malaysia</td>
+            <td class="tg-dg7a">07-3345682</td>
+            <td class="tg-dg7a">27842</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Dr Zulkifli Manshor</td>
+            <td class="tg-0lax">MD UKM</td>
+            <td class="tg-0lax">Klinik Dr Zul &amp; Surgeri</td>
+            <td class="tg-0lax">No 70 Jalan Teluk Ramunia Sungai Rengit Pengerang Johor 81620 Malaysia</td>
+            <td class="tg-0lax">07-8263043</td>
+            <td class="tg-0lax">35545</td>
+          </tr>
+          <tr>
+            <td class="tg-dg7a">Dayana Isyafiqa Norisam</td>
+            <td class="tg-dg7a">MD</td>
+            <td class="tg-dg7a">Klinik Waqaf an Nur Bukit Tiram</td>
+            <td class="tg-dg7a">Masjid Al Makmur Jalan Seri Panti Taman Bukit Tiram Ulu Tiram Johor 81800 Malaysia</td>
+            <td class="tg-dg7a">07-8614102</td>
+            <td class="tg-dg7a">58679</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Dr Martin Ponniah</td>
+            <td class="tg-0lax"></td>
+            <td class="tg-0lax">Syarikat Klinik Mahajana Sdn Bhd</td>
+            <td class="tg-0lax">7, Jalan Aji Segamat Johor 85000 Malaysia</td>
+            <td class="tg-0lax">07-9311336</td>
+            <td class="tg-0lax">25797</td>
+          </tr>
+          <tr>
+            <td class="tg-dg7a">Dr Kumarasingam Tamil Arasu</td>
+            <td class="tg-dg7a">MBBS</td>
+            <td class="tg-dg7a">K-Health Medical Clinic</td>
+            <td class="tg-dg7a">Jalan Harmonium 35/1 Taman Desa Tebrau Johor Bahru Johor 81100 Malaysia</td>
+            <td class="tg-dg7a">07-3615743</td>
+            <td class="tg-dg7a"></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Dr Tan Too Moh</td>
+            <td class="tg-0lax">MBBS(MALAYA)</td>
+            <td class="tg-0lax">Federal Clinic</td>
+            <td class="tg-0lax">34, Jalan Harimau Tarum Century Garden Johor Bahru Johor 80250 Malaysia</td>
+            <td class="tg-0lax">07-3339928</td>
+            <td class="tg-0lax">25612</td>
+          </tr>
+          <tr>
+            <td class="tg-dg7a">Dr Thomas Yeap</td>
+            <td class="tg-dg7a">Doctor of Medicine</td>
+            <td class="tg-dg7a"></td>
+            <td class="tg-dg7a">288, Jalan Kenanga 29/2 Taman Indahpura Kulai Johor 81000 Malaysia</td>
+            <td class="tg-dg7a">016-9224816</td>
+            <td class="tg-dg7a">66316</td>
+          </tr>
+          <tr>
+            <td class="tg-0lax">Dr Ahmadol Yusof</td>
+            <td class="tg-0lax">MD (USM)</td>
+            <td class="tg-0lax">Klinik Tawakal</td>
+            <td class="tg-0lax">No. 13, Jalan Bungsu,Parit Sulong Batu Pahat Johor 83500 Malaysia</td>
+            <td class="tg-0lax">07-4187091</td>
+            <td class="tg-0lax">28748</td>
+          </tr>
+          <tr>
+            <td class="tg-dg7a">Dr Mohd Faizal Zainal Abidin</td>
+            <td class="tg-dg7a">MBBS (Adelaide) MSc Occupational Health (UKM)</td>
+            <td class="tg-dg7a">Poliklinik Rozikin</td>
+            <td class="tg-dg7a">No 24 Jln Tembikai 3 Taman Kota Masai Pasir Gudang Johor 81700 Malaysia</td>
+            <td class="tg-dg7a">07-2562909</td>
+            <td class="tg-dg7a">34816</td>
+          </tr>
+        </tbody>
+        </table>
+
+        <table class="tg">
+            <h2 id="Kedah">Kedah</h2>  
+            <thead>
+              <tr>
+                <th class="tg-0lax">Physician</th>
+                <th class="tg-0lax">Qualifications</th>
+                <th class="tg-0lax">Clinic or Hospital Name</th>
+                <th class="tg-0lax">Address</th>
+                <th class="tg-0lax">Main Line</th>
+                <th class="tg-0lax">MMC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-dg7a">Kok Thye Gan</td>
+                <td class="tg-dg7a">MBBS</td>
+                <td class="tg-dg7a">Klinik Bersatu (Kulim) Sdn. Bhd.</td>
+                <td class="tg-dg7a">287-H, Jln. Asaad Kulim Kedah 9000 Malaysia</td>
+                <td class="tg-dg7a">04-491 3910</td>
+                <td class="tg-dg7a"></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Jailani Shafie</td>
+                <td class="tg-0lax">MD (UKM)</td>
+                <td class="tg-0lax">Poliklinik Mutiara</td>
+                <td class="tg-0lax">No 1, Taman Desa Aman Jalan Sultanah Alor Setar Kedah 05350 Malaysia</td>
+                <td class="tg-0lax">04-7391503</td>
+                <td class="tg-0lax">28977</td>
+              </tr>
+              <tr>
+                <td class="tg-dg7a">Dr Wai Leng Song</td>
+                <td class="tg-dg7a">MBBS PGDip O.M.H.S FRACGP</td>
+                <td class="tg-dg7a">Klinik Ceria Sdn Bhd</td>
+                <td class="tg-dg7a">120, Jalan Inai,Taman Ria Jaya Sungai Petani Kedah 08000 Malaysia</td>
+                <td class="tg-dg7a">04-4466987</td>
+                <td class="tg-dg7a">28806</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">David Ting Teck Onn</td>
+                <td class="tg-0lax">MBBS (UM)</td>
+                <td class="tg-0lax">Utama Poliklinik &amp; Surgeri</td>
+                <td class="tg-0lax">68 Jln Psk 2, Pekan Simpang Kuala Alor Setar Kedah 05400 Malaysia</td>
+                <td class="tg-0lax">04-773 3992</td>
+                <td class="tg-0lax">29071</td>
+              </tr>
+            </tbody>
+            </table>
+
+            <table class="tg">
+                <h2 id="Kelantan">Kelantan</h2>
+                <thead>
+                  <tr>
+                    <th class="tg-0lax">Physician</th>
+                    <th class="tg-0lax">Qualifications</th>
+                    <th class="tg-0lax">Clinic or Hospital Name</th>
+                    <th class="tg-0lax">Address</th>
+                    <th class="tg-0lax">Main Line</th>
+                    <th class="tg-0lax">MMC</th>
+                  </tr>
+                </thead>
+                </table>
+
+                <table class="tg">
+                    <h2 id="Melaka">Melaka</h2>
+                    <thead>
+                      <tr>
+                        <th class="tg-0lax">Physician</th>
+                        <th class="tg-0lax">Qualifications</th>
+                        <th class="tg-0lax">Clinic or Hospital Name</th>
+                        <th class="tg-0lax">Address</th>
+                        <th class="tg-0lax">Main Line</th>
+                        <th class="tg-0lax">MMC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0lax">Dr Yap Hong Keong</td>
+                        <td class="tg-0lax">MBBS</td>
+                        <td class="tg-0lax">YAP’S CLINIC</td>
+                        <td class="tg-0lax">27, Jalan PPPS , Pusat Perniagaan Putra Sentosa,Bukit Baru Melaka Melaka 75150 Malaysia</td>
+                        <td class="tg-0lax">06-3182088</td>
+                        <td class="tg-0lax">34345</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Cheng Soon Neo</td>
+                        <td class="tg-0lax">MBBS(Mal)</td>
+                        <td class="tg-0lax">Klinik Kuan Sdn Bhd</td>
+                        <td class="tg-0lax">116/1, Jalan Bendahara Melaka Melaka 75100 Malaysia</td>
+                        <td class="tg-0lax">06-2820075</td>
+                        <td class="tg-0lax">23959</td>
+                      </tr>
+                    </tbody>
+                    </table>
+
+                    <table class="tg">
+                        <h2 id="Negeri Sembilan">Negeri Sembilan</h2>
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Physician</th>
+                            <th class="tg-0lax">Qualifications</th>
+                            <th class="tg-0lax">Clinic or Hospital Name</th>
+                            <th class="tg-0lax">Address</th>
+                            <th class="tg-0lax">Main Line</th>
+                            <th class="tg-0lax">MMC</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-dg7a">Lai Kah Lee</td>
+                            <td class="tg-dg7a">MD (UKM)</td>
+                            <td class="tg-dg7a">Klinik Dr Ko</td>
+                            <td class="tg-dg7a">345, SS 2B8, Uptown Avenue, Seremban 2 Seremban Negeri Sembilan 70300 Malaysia</td>
+                            <td class="tg-dg7a">06-601 5982</td>
+                            <td class="tg-dg7a">29473</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-0lax">Dr Chuan Leong Lim</td>
+                            <td class="tg-0lax">MBBS(UM) FRACGP</td>
+                            <td class="tg-0lax">Klinik Lim</td>
+                            <td class="tg-0lax">No. 3425, Jalan RJ 6/3Taman Rasah Jaya Seremban Negeri Sembilan 70300 Malaysia</td>
+                            <td class="tg-0lax">06-631 6811</td>
+                            <td class="tg-0lax"></td>
+                          </tr>
+                        </tbody>
+                        </table>
+
+                        <table class="tg">
+                            <h2 id="Pahang">Pahang</h2>
+                            <thead>
+                              <tr>
+                                <th class="tg-0lax">Physician</th>
+                                <th class="tg-0lax">Qualifications</th>
+                                <th class="tg-0lax">Clinic or Hospital Name</th>
+                                <th class="tg-0lax">Address</th>
+                                <th class="tg-0lax">Main Line</th>
+                                <th class="tg-0lax">MMC</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tg-dg7a">Dr Cheng Chih Chung</td>
+                                <td class="tg-dg7a">M.B.B.S.</td>
+                                <td class="tg-dg7a">Klinik Chung</td>
+                                <td class="tg-dg7a">L1-19, Lipis Centrepoint,Jalan Pekeliling,Kuala Lipis Pahang 27200 Malaysia</td>
+                                <td class="tg-dg7a">09-3122426</td>
+                                <td class="tg-dg7a">27393</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0lax">Boon Teck Low</td>
+                                <td class="tg-0lax">MBBS (UM)</td>
+                                <td class="tg-0lax">Klinik Low</td>
+                                <td class="tg-0lax">32, Jln. Dato’ AbdullahRaub Pahang 27600Malaysia</td>
+                                <td class="tg-0lax">09-3551268</td>
+                                <td class="tg-0lax">26684</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-dg7a">Dr Sreetharanathan Ramanathan</td>
+                                <td class="tg-dg7a">MBBS</td>
+                                <td class="tg-dg7a">Klinik Sentosa</td>
+                                <td class="tg-dg7a">8 Lorong MarketTriang Pahang 28300Malaysia</td>
+                                <td class="tg-dg7a">09-2558300</td>
+                                <td class="tg-dg7a">23217</td>
+                              </tr>
+                            </tbody>
+                            </table>
+
+                            <table class="tg">
+                                <h2 id="Perak">Perak</h2>
+                                <thead>
+                                  <tr>
+                                    <th class="tg-0lax">Physician</th>
+                                    <th class="tg-0lax">Qualifications</th>
+                                    <th class="tg-0lax">Clinic or Hospital Name</th>
+                                    <th class="tg-0lax">Address</th>
+                                    <th class="tg-0lax">Main Line</th>
+                                    <th class="tg-0lax">MMC</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="tg-dg7a">Kamalanathan A.G. Raju</td>
+                                    <td class="tg-dg7a">MBBS (Madras)</td>
+                                    <td class="tg-dg7a">Klinik Anand &amp; Viknesh</td>
+                                    <td class="tg-dg7a">642 Jalan Kuala Kangsar Halaman Meru Damai Ipoh Perak 30010 Malaysia</td>
+                                    <td class="tg-dg7a">05-2915642</td>
+                                    <td class="tg-dg7a">23703</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-0lax">Dr. Mohd Dewa Abdullah (Devaraja Thuryrajah)</td>
+                                    <td class="tg-0lax">MB,BS (RAJASTHAN), DRM (MU,LPPKN),MSc.Occupational Medicine, Safety and Health(Edith Cowan Univ.)MAFP/FRACGP(Aust.)</td>
+                                    <td class="tg-0lax">KLINIK NAGA</td>
+                                    <td class="tg-0lax">NO:33 LRG 1, PPAL11,PEKAN LANGKAP Langkap Perak 36700 Malaysia</td>
+                                    <td class="tg-0lax">05-6591771</td>
+                                    <td class="tg-0lax">23225</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-dg7a">Dr Sundram Arumugam</td>
+                                    <td class="tg-dg7a"></td>
+                                    <td class="tg-dg7a">Klinik Jaya Medical &amp; Skin Clinic</td>
+                                    <td class="tg-dg7a">No 71 Jerma Complex Jalan Sultan Azlan Shah Utara Ipoh Perak 31400 Malaysia</td>
+                                    <td class="tg-dg7a">019-5112524</td>
+                                    <td class="tg-dg7a"></td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-0lax">Prof Sook Ching Chan</td>
+                                    <td class="tg-0lax">MD, FRACGP, FAFPM, FAMM</td>
+                                    <td class="tg-0lax">Klinik Teoh &amp; Chan Sdn Bhd</td>
+                                    <td class="tg-0lax">18, Jalan Besar Batu Gajah Perak 31000 Malaysia</td>
+                                    <td class="tg-0lax">6017-5780089</td>
+                                    <td class="tg-0lax">21911</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-dg7a">Huey Ing Goh</td>
+                                    <td class="tg-dg7a">MD</td>
+                                    <td class="tg-dg7a">Klinik GL Medic PLT</td>
+                                    <td class="tg-dg7a">43, Jalan Raja Perempuan Mazwin, Taman Rishah, Ipoh Perak 30100 Malaysia</td>
+                                    <td class="tg-dg7a">05-5273868</td>
+                                    <td class="tg-dg7a">52236</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-0lax">Dr Sethu Karuppan</td>
+                                    <td class="tg-0lax">MBBS, FRACGP,AM</td>
+                                    <td class="tg-0lax"></td>
+                                    <td class="tg-0lax">IG2 Allamanda Condo Meru Valley Resort Ipoh Perak 30020 Malaysia</td>
+                                    <td class="tg-0lax">6012-3975451</td>
+                                    <td class="tg-0lax">22240</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-dg7a">Dr Sau Khuen Lau</td>
+                                    <td class="tg-dg7a">MBBS</td>
+                                    <td class="tg-dg7a">Klinik Lim &amp; Lau</td>
+                                    <td class="tg-dg7a">38 Jalan New Pasir Puteh Ipoh Perak 31650 Malaysia</td>
+                                    <td class="tg-dg7a">605-3218164</td>
+                                    <td class="tg-dg7a">21729</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="tg-0lax">Dr Lily Wong Leh Sing</td>
+                                    <td class="tg-0lax">MD</td>
+                                    <td class="tg-0lax">Klinik I-Medic</td>
+                                    <td class="tg-0lax">No 27, Jalan Selasar Rokam 11Taman Ipoh Jaya Ipoh Perak 31350 Malaysia</td>
+                                    <td class="tg-0lax">05-3123208</td>
+                                    <td class="tg-0lax"></td>
+                                  </tr>
+                                </tbody>
+                                </table>
+           
+
+                                <table class="tg">
+                                    <h2 id="Perlis">Perlis</h2>
+                                    <thead>
+                                      <tr>
+                                        <th class="tg-0lax">Physician</th>
+                                        <th class="tg-0lax">Qualifications</th>
+                                        <th class="tg-0lax">Clinic or Hospital Name</th>
+                                        <th class="tg-0lax">Address</th>
+                                        <th class="tg-0lax">Main Line</th>
+                                        <th class="tg-0lax">MMC</th>
+                                      </tr>
+                                    </thead>
+                                    </table>
+
+                                    <table class="tg">
+                                        <h2 id="Pulau Pinang">Pulau Pinang</h2>
+                                        <thead>
+                                          <tr>
+                                            <th class="tg-0lax">Physician</th>
+                                            <th class="tg-0lax">Qualifications</th>
+                                            <th class="tg-0lax">Clinic or Hospital Name</th>
+                                            <th class="tg-0lax">Address</th>
+                                            <th class="tg-0lax">Main Line</th>
+                                            <th class="tg-0lax">MMC</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr Alan Ch’ng</td>
+                                            <td class="tg-dg7a">MD(USM), MIntMed(UM), Fellowship in Geriatrics (Mal, Spore), CMIA(NIOSH)</td>
+                                            <td class="tg-dg7a">Loh Guan Lye Specialists Centre</td>
+                                            <td class="tg-dg7a">238, Jalan Macalister George Town Pulau Pinang 10400 Malaysia</td>
+                                            <td class="tg-dg7a">604-238 8888</td>
+                                            <td class="tg-dg7a">40290</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr Boon Poh Eng</td>
+                                            <td class="tg-0lax">MD</td>
+                                            <td class="tg-0lax"></td>
+                                            <td class="tg-0lax">300Y-1 ( Ground Floor )Jalan Relau, Taman Desaria Sungai Ara Bayan Lepas Pulau Pinang 11900 Malaysia</td>
+                                            <td class="tg-0lax">604-6463185</td>
+                                            <td class="tg-0lax">32206</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Teak Sheng Gee</td>
+                                            <td class="tg-dg7a">M.D., MSurg(Neurosurgery)</td>
+                                            <td class="tg-dg7a">Pantai Hospital Penang</td>
+                                            <td class="tg-dg7a">82, Jalan Tengah11900 Bayan Baru Bayan Lepas Pulau Pinang 11900 Malaysia</td>
+                                            <td class="tg-dg7a">604-639 6277</td>
+                                            <td class="tg-dg7a">40795</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr Eng Leong Goh</td>
+                                            <td class="tg-0lax">Consultant Cardilogist M.D. MRCP MMED FNHAM</td>
+                                            <td class="tg-0lax">Loh Guan Lye Specialists Centre</td>
+                                            <td class="tg-0lax">19 &amp; 21, Logan Road George Town Pulau Pinang 10400 Malaysia</td>
+                                            <td class="tg-0lax">604-2388888</td>
+                                            <td class="tg-0lax">31818</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Boon Hui Gooi</td>
+                                            <td class="tg-dg7a">MBBS(UM) FRCS</td>
+                                            <td class="tg-dg7a">Penang Adventist Hospital</td>
+                                            <td class="tg-dg7a">465, Jalan BurmaGeorgetown Pulau Pinang 10350 Malaysia</td>
+                                            <td class="tg-dg7a">04-2227200</td>
+                                            <td class="tg-dg7a">32846</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr Lee Huey Yang</td>
+                                            <td class="tg-0lax">MBBS,MRACOG,FICS, FRCOG,AM</td>
+                                            <td class="tg-0lax">Tan and Tan Maternity Clinic</td>
+                                            <td class="tg-0lax">1598 Jalan Kebun Sireh14000 Bukit MertajamBukit Mertajam Pulau Pinang 14000 Malaysia</td>
+                                            <td class="tg-0lax">04-5073233</td>
+                                            <td class="tg-0lax">27785</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Low Kah Pin</td>
+                                            <td class="tg-dg7a">MBBS(UM), MObGyn(UM),MRCOG(UK),FMAS/ART(India),MSc BHARE(Spain)</td>
+                                            <td class="tg-dg7a">Loh Guan Lye Specialists Centre</td>
+                                            <td class="tg-dg7a">238, Jalan Macalister George Town Pulau Pinang 10400 Malaysia</td>
+                                            <td class="tg-dg7a">019-6001388</td>
+                                            <td class="tg-dg7a">45863</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr Jamie Khoo Siew Farn</td>
+                                            <td class="tg-0lax">MB BCh BAP (IRE), IBCLC</td>
+                                            <td class="tg-0lax">Poliklinik Bagan</td>
+                                            <td class="tg-0lax">75F Jalan Trengganu Georgetown Pulau Pinang 10460 Malaysia</td>
+                                            <td class="tg-0lax">604-2812582</td>
+                                            <td class="tg-0lax"></td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr. Tuck Wah Kuan</td>
+                                            <td class="tg-dg7a">MD</td>
+                                            <td class="tg-dg7a">Poliklinik Kuan</td>
+                                            <td class="tg-dg7a">21, Jalan Gan Chai Leng Taman Chai Leng Perai Pulau Pinang 13700 Malaysia</td>
+                                            <td class="tg-dg7a">604-3983771</td>
+                                            <td class="tg-dg7a">27345</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Kyaw Kyaw</td>
+                                            <td class="tg-0lax">MBBS FRCS</td>
+                                            <td class="tg-0lax">Bagan Specialist Centre</td>
+                                            <td class="tg-0lax">Jln Bagan 1 Butterworth Pulau Pinang 13400 Malaysia</td>
+                                            <td class="tg-0lax">604-332 2800</td>
+                                            <td class="tg-0lax">25963</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Ban Soon Lee</td>
+                                            <td class="tg-dg7a">MD (UKM) M.MED (Anaes)</td>
+                                            <td class="tg-dg7a">Bagan Specialist Centre</td>
+                                            <td class="tg-dg7a">Jalan Bagan 1 Butterworth Pulau Pinang 13400 Malaysia</td>
+                                            <td class="tg-dg7a">04-3322800</td>
+                                            <td class="tg-dg7a">27566</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr. Guat Eng Loo</td>
+                                            <td class="tg-0lax">MBBS (UM)</td>
+                                            <td class="tg-0lax"></td>
+                                            <td class="tg-0lax">Blok 2C – 01 – 02 Medan Angsana SatuBandar BaruAyer Itam Pulau Pinang 11500Malaysia</td>
+                                            <td class="tg-0lax">04 8297054</td>
+                                            <td class="tg-0lax">27077</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr. Boon Phoe Ooi</td>
+                                            <td class="tg-dg7a">MBBS MRCP(UK) FRCP(Edin) FRCP(London)AM CMIA(NIOSH) Gastro Training with KKM</td>
+                                            <td class="tg-dg7a">KPJ Penang Specialist Hospital</td>
+                                            <td class="tg-dg7a">570, Jalan Perda Utama, Bandar Baru Perda,Bukit Mertajam Pulau Pinang 14000Malaysia</td>
+                                            <td class="tg-dg7a">604-548 6688</td>
+                                            <td class="tg-dg7a">35533</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Ban Chung Poh</td>
+                                            <td class="tg-0lax">MD (UKM), Dr Anaesthesiology &amp; Critical Care (UKM)</td>
+                                            <td class="tg-0lax">Gleneagles Penang Medical Centre</td>
+                                            <td class="tg-0lax">9th Floor, Operating Theatre,Gleneagles Penang Medical Centre1, Jalan PangkorGeorgetown Pulau Pinang 10500 Malaysia</td>
+                                            <td class="tg-0lax"></td>
+                                            <td class="tg-0lax">42937</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr Kwai Meng Pong</td>
+                                            <td class="tg-dg7a">FRCP (Glasg), FRCP(Edin), MBBS(Mal), MRCPCH , MRCP(UK), M. Med.</td>
+                                            <td class="tg-dg7a"></td>
+                                            <td class="tg-dg7a">465, Jalan Burma Georgetown Pulau Pinang 10350 Malaysia</td>
+                                            <td class="tg-dg7a">04-2227200</td>
+                                            <td class="tg-dg7a">30451</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Dr. Sathindren Santhirathelagan</td>
+                                            <td class="tg-0lax">MBBS MRCP(UK) CMIA (NIOSH MAL)</td>
+                                            <td class="tg-0lax">Gleneagles Hospital</td>
+                                            <td class="tg-0lax">Gleneagles Hospital 1 Jalan Pangkor Georgetown Pulau Pinang 10050 Malaysia</td>
+                                            <td class="tg-0lax">604-2229191</td>
+                                            <td class="tg-0lax">31739</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr Kah Keong Tan</td>
+                                            <td class="tg-dg7a"></td>
+                                            <td class="tg-dg7a">Dr KK Tan Specialist Clinic</td>
+                                            <td class="tg-dg7a">6, Lorong Tembikai Satu, Pusat Komersial Sri Rambai, Bukit Mertajam Pulau Pinang 14000 Malaysia</td>
+                                            <td class="tg-dg7a">604-5388911</td>
+                                            <td class="tg-dg7a">27807</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Khian Chew Teh</td>
+                                            <td class="tg-0lax">MBBS MRCPCH</td>
+                                            <td class="tg-0lax">Klinik Pakar Union</td>
+                                            <td class="tg-0lax">2880, Jalan Rozhan Bukit Mertajam Pulau Pinang 14000 Malaysia</td>
+                                            <td class="tg-0lax">04-5522355</td>
+                                            <td class="tg-0lax">40090</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr Tang Weng Heng</td>
+                                            <td class="tg-dg7a">MBBS(Malaya), MCO(Malaya)</td>
+                                            <td class="tg-dg7a">Penang Adventist Hospital</td>
+                                            <td class="tg-dg7a">465 Jalan Burma Georgetown Pulau Pinang 10350 Malaysia</td>
+                                            <td class="tg-dg7a">604-2227524</td>
+                                            <td class="tg-dg7a">42848</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Mr Ga Rin Yau</td>
+                                            <td class="tg-0lax">MBBS FRCSEd Ophthalmology</td>
+                                            <td class="tg-0lax">Pantai Hospital Penang</td>
+                                            <td class="tg-0lax">82, Jalan Tengah Bayan Baru Pulau Pinang 11900 Malaysia</td>
+                                            <td class="tg-0lax">04-643 3888</td>
+                                            <td class="tg-0lax">27490</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-dg7a">Dr Chong Yew Thong</td>
+                                            <td class="tg-dg7a">MD (USM), MRCP (UK), Adv Master Dermatology (UKM), Dip MLT (USM), Dip STDs/AIDS (COTTISA)</td>
+                                            <td class="tg-dg7a">Gleneagles Penang</td>
+                                            <td class="tg-dg7a">No. 1, Pangkor Road, George Town Pulau Pinang 10050 Malaysia</td>
+                                            <td class="tg-dg7a">604-2229157</td>
+                                            <td class="tg-dg7a">36877</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="tg-0lax">Min Fang Yip</td>
+                                            <td class="tg-0lax">MBBS</td>
+                                            <td class="tg-0lax">Koe Klinik</td>
+                                            <td class="tg-0lax">289, Burmah Road,Georgetown Pulau Pinang 10350Malaysia</td>
+                                            <td class="tg-0lax">6042270404</td>
+                                            <td class="tg-0lax">37164</td>
+                                          </tr>
+                                        </tbody>
+                                        </table>
+
+                                        <table class="tg">
+                                            <h2 id="Sabah">Sabah</h2>
+                                            <thead>
+                                              <tr>
+                                                <th class="tg-0lax">Physician</th>
+                                                <th class="tg-0lax">Qualifications</th>
+                                                <th class="tg-0lax">Clinic or Hospital Name</th>
+                                                <th class="tg-0lax">Address</th>
+                                                <th class="tg-0lax">Main Line</th>
+                                                <th class="tg-0lax">MMC</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Theodora Hemalata</td>
+                                                <td class="tg-dg7a">MD</td>
+                                                <td class="tg-dg7a">Sabah Family Planning Clinic</td>
+                                                <td class="tg-dg7a">Jln Family Planning Centre Off Jln Kebajikan Kota Kinabalu Sabah 88000 Malaysia</td>
+                                                <td class="tg-dg7a">88245209</td>
+                                                <td class="tg-dg7a">44724</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-0lax">Dr Jonny Quirinus</td>
+                                                <td class="tg-0lax">M.D</td>
+                                                <td class="tg-0lax">Klinik Dr Siti &amp; Surgeri</td>
+                                                <td class="tg-0lax">Bandar Sri Perdana Lahad Datu Sabah 91110 Malaysia</td>
+                                                <td class="tg-0lax">89896216</td>
+                                                <td class="tg-0lax">45865</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Haslezah Saelih</td>
+                                                <td class="tg-dg7a">MBBS (Malaya), DFM (AFPM)</td>
+                                                <td class="tg-dg7a">Unit Kesihatan UiTM Cawangan Sabah</td>
+                                                <td class="tg-dg7a">Unit Kesihatan UiTM Cawangan Sabah Beg Berkunci 71 Kota Kinabalu Sabah 88997 Malaysia</td>
+                                                <td class="tg-dg7a">88325445</td>
+                                                <td class="tg-dg7a">42403</td>
+                                              </tr>
+                                            </tbody>
+                                            </table>
+
+                                            <table class="tg">
+                                                <h2 id="Sarawak">Sarawak</h2>
+                                                <thead>
+                                                  <tr>
+                                                    <th class="tg-0lax">Physician</th>
+                                                    <th class="tg-0lax">Qualifications</th>
+                                                    <th class="tg-0lax">Clinic or Hospital Name</th>
+                                                    <th class="tg-0lax">Address</th>
+                                                    <th class="tg-0lax">Main Line</th>
+                                                    <th class="tg-0lax">MMC</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="tg-dg7a">Dr Melanie Asaad</td>
+                                                    <td class="tg-dg7a">MBBS (UM), DFM (AFPM)</td>
+                                                    <td class="tg-dg7a">Klinik Ibukota Semarak</td>
+                                                    <td class="tg-dg7a">Klinik Ibukota Semarak, Ground Floor, S/L 8, Lot 5280, Jalan Semarak Kuching Sarawak 93050 Malaysia</td>
+                                                    <td class="tg-dg7a">08-2428912</td>
+                                                    <td class="tg-dg7a">41805</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-0lax">Dr Kuok Tuh Cheu</td>
+                                                    <td class="tg-0lax">MBBS, UM, MSc(Occupational Med) NUS, Cert Aviation, Cert Diving Emergencies</td>
+                                                    <td class="tg-0lax">Klinik Dr Cheu SB</td>
+                                                    <td class="tg-0lax">Lot 512, Pelita Commercial CentreMiri Sarawak 98000Malaysia</td>
+                                                    <td class="tg-0lax">08-5438068</td>
+                                                    <td class="tg-0lax">24722</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-dg7a">Dr Kian Peng Chew</td>
+                                                    <td class="tg-dg7a">M.D.</td>
+                                                    <td class="tg-dg7a"></td>
+                                                    <td class="tg-dg7a">34 Taman Sungai Tengah Valley, Jalan Matang Kuching Sarawak 93250 Malaysia</td>
+                                                    <td class="tg-dg7a">08-2642496</td>
+                                                    <td class="tg-dg7a">38866</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-0lax">Dr Robert T C Kho</td>
+                                                    <td class="tg-0lax">MBBS(Singapore); M Med, Geriatrics (Australia)</td>
+                                                    <td class="tg-0lax">Asia Clinic</td>
+                                                    <td class="tg-0lax">94 Jln Padungan Kuching Sarawak 93100 Malaysia</td>
+                                                    <td class="tg-0lax">08-2243519</td>
+                                                    <td class="tg-0lax">26750</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-dg7a">Chin Chyou Lam</td>
+                                                    <td class="tg-dg7a">MBBS</td>
+                                                    <td class="tg-dg7a">Union Clinic</td>
+                                                    <td class="tg-dg7a">52, Jalan Temenggong Salau Bau Sarawak 94000</td>
+                                                    <td class="tg-dg7a">08-2763324</td>
+                                                    <td class="tg-dg7a">22887</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-0lax">Dr Lak Moi Lee</td>
+                                                    <td class="tg-0lax">MBBS</td>
+                                                    <td class="tg-0lax">Klinik Chiew</td>
+                                                    <td class="tg-0lax">327 Chan Bee Kiew BuildingPadungan RoadKuching Sarawak 93450Malaysia</td>
+                                                    <td class="tg-0lax">08-2332327</td>
+                                                    <td class="tg-0lax"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-dg7a">Lau Liak Koi</td>
+                                                    <td class="tg-dg7a">MBBS (Mal), MMed(Sports Med) Australia</td>
+                                                    <td class="tg-dg7a">Limbang Medical Clinic</td>
+                                                    <td class="tg-dg7a">First Floor, 38-40 Main BazaarP.O. 285Limbang Sarawak 98700Malaysia</td>
+                                                    <td class="tg-dg7a">08-5211736</td>
+                                                    <td class="tg-dg7a">22502</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="tg-0lax">Dr Noor Ailing Mohammad</td>
+                                                    <td class="tg-0lax">MBBS</td>
+                                                    <td class="tg-0lax"></td>
+                                                    <td class="tg-0lax">Lot 285, Ground Floor, Jalan Ban Hock, 93100 Kuching Sarawak 93100 Malaysia</td>
+                                                    <td class="tg-0lax">08-2417388</td>
+                                                    <td class="tg-0lax"></td>
+                                                  </tr>
+                                                </tbody>
+                                                </table>
+
+                                                <table class="tg">
+                                                    <h2 id="Selangor">Selangor</h2>
+                                                    <thead>
+                                                      <tr>
+                                                        <th class="tg-0lax">Physician</th>
+                                                        <th class="tg-0lax">Qualifications</th>
+                                                        <th class="tg-0lax">Clinic or Hospital Name</th>
+                                                        <th class="tg-0lax">Address</th>
+                                                        <th class="tg-0lax">Main Line</th>
+                                                        <th class="tg-0lax">MMC</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Mohd Haris Fadzillah Abd Rahman</td>
+                                                        <td class="tg-dg7a">MB ChB MRCP(UK)</td>
+                                                        <td class="tg-dg7a">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-dg7a">1 Jalan SS 12/1A Subang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-dg7a">603-56391212</td>
+                                                        <td class="tg-dg7a">39313</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Angelina Subashini Amaladoss</td>
+                                                        <td class="tg-0lax">MBBS DCH MRCP</td>
+                                                        <td class="tg-0lax">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-0lax">1 Jalan SS 12/1A Subang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-0lax">603-56391212</td>
+                                                        <td class="tg-0lax">25913</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Ainur Rahman Anuar</td>
+                                                        <td class="tg-dg7a">MBBS M.MED (Ophthal) Fellow- Cornea And Anterior Segment, Fellow- Epidemiology (Ophthalmology)</td>
+                                                        <td class="tg-dg7a">Ara Damansara Medical Center</td>
+                                                        <td class="tg-dg7a">Lot 2, Jalan Lapangan Terbang Subang, Seksyen U2 Shah Alam Selangor 40150 Malaysia</td>
+                                                        <td class="tg-dg7a">03-5639 1212</td>
+                                                        <td class="tg-dg7a">38552</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Ahmad Nizar Bin Jamaluddin</td>
+                                                        <td class="tg-0lax"></td>
+                                                        <td class="tg-0lax">Ara Damansara Medical Centre</td>
+                                                        <td class="tg-0lax">Lot 2, Jalan Lapangan Terbang Subang, Seksyen U2 Shah Alam Selangor 40150 Malaysia</td>
+                                                        <td class="tg-0lax">03-78399805</td>
+                                                        <td class="tg-0lax">26628</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Dr Ahmad Mustaqim Bin Sulaiman</td>
+                                                        <td class="tg-dg7a">MD</td>
+                                                        <td class="tg-dg7a">Klinik Wong Singh Country Homes</td>
+                                                        <td class="tg-dg7a">4 &amp; 5, Jalan Desa 1/1Bandar Country Homes Rawang Selangor 48000 Malaysia</td>
+                                                        <td class="tg-dg7a">03-60916513</td>
+                                                        <td class="tg-dg7a">68466</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Dr. Liew Boon Seng</td>
+                                                        <td class="tg-0lax">M.D. (USM); M.S. (Neurosurgery) USM</td>
+                                                        <td class="tg-0lax">Hospital Sugai Buloh</td>
+                                                        <td class="tg-0lax">Department of Neurosurgery, Hospital Sungai Buloh, Jalan Hospital, Sungai Buloh Selangor 41050 Malaysia</td>
+                                                        <td class="tg-0lax">03-61454333</td>
+                                                        <td class="tg-0lax">36809</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Dr Sushil Brito Mutunayagam</td>
+                                                        <td class="tg-dg7a">MBBS (Mang)MS ORL HNS (Malaya)</td>
+                                                        <td class="tg-dg7a">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-dg7a">1 Jalan SS 12/1ASubang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-dg7a">03-56391212</td>
+                                                        <td class="tg-dg7a">32806</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">C K Ranjeev C K Prabhakeran</td>
+                                                        <td class="tg-0lax">MBBS MRCP FRCP</td>
+                                                        <td class="tg-0lax">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-0lax">1 Jalan SS 12/1ASubang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-0lax">03-56391212</td>
+                                                        <td class="tg-0lax">28378</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Dr. Premadeva C Satkurunathan</td>
+                                                        <td class="tg-dg7a">M.B.B.S(MAHE), M.S(OPHTHAL) UKM, CCFT (PAED OPHTHAL &amp;STRABISMUS)M’SIA, A.M (M’SIA)</td>
+                                                        <td class="tg-dg7a">Kpj Rawang Specialist Hospital</td>
+                                                        <td class="tg-dg7a">Jalan Rawang, Bandar Baru Rawang, Rawang Selangor 48000 Malaysia</td>
+                                                        <td class="tg-dg7a">03-60998873</td>
+                                                        <td class="tg-dg7a">35486</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Dr Chu Kin Che</td>
+                                                        <td class="tg-0lax">MBChB, MRCP(UK), MRCGP(UK), CCT, CMIA</td>
+                                                        <td class="tg-0lax">Klinik Tecna</td>
+                                                        <td class="tg-0lax">Suite G05 Wisma Tecna 18A Jalan 51a/223, Seksyen 51a Petaling Jaya Selangor 46100 Malaysia</td>
+                                                        <td class="tg-0lax">011-26603223</td>
+                                                        <td class="tg-0lax">68873</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Harn Chin Chen</td>
+                                                        <td class="tg-dg7a">MD Gastroenterology Fellowship (MOH) MRCP(UK)</td>
+                                                        <td class="tg-dg7a">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-dg7a">1 Jalan SS 12/1A Subang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-dg7a">03-56391212</td>
+                                                        <td class="tg-dg7a">40000</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Chin Chwen Chng</td>
+                                                        <td class="tg-0lax">MBBS, MRCP, AdvMDerm</td>
+                                                        <td class="tg-0lax">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-0lax">1 Jalan SS 12/1A Subang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-0lax">603-56391212</td>
+                                                        <td class="tg-0lax">44097</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Andre Das</td>
+                                                        <td class="tg-dg7a">MBBS FRCS MMed</td>
+                                                        <td class="tg-dg7a">Hospital Kajang</td>
+                                                        <td class="tg-dg7a">4, Jalan Semenyih Kajang Selangor 43000 Malaysia</td>
+                                                        <td class="tg-dg7a">03-8913 3333</td>
+                                                        <td class="tg-dg7a">26779</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Swee Kim Gong</td>
+                                                        <td class="tg-0lax">MBBS M.Path(Haem) Certificate in Transfusion Medicine</td>
+                                                        <td class="tg-0lax">Pathology &amp; Clinical Laboratory Sdn Bhd</td>
+                                                        <td class="tg-0lax">87-91, Jln SS 25/2Taman Bukit Emas Petaling Jaya Selangor 47301 Malaysia</td>
+                                                        <td class="tg-0lax">03-7809 8188</td>
+                                                        <td class="tg-0lax"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Dr Gurdeep Singh Grewal</td>
+                                                        <td class="tg-dg7a">MBBS(Malaya) MPM(Malaya) CMIA, EMDR(Aust)</td>
+                                                        <td class="tg-dg7a">Tropicana Medical Center</td>
+                                                        <td class="tg-dg7a">11, Jalan Teknologi, Pju 5 Kota Damansara Petaling Jaya Selangor 47810 Malaysia</td>
+                                                        <td class="tg-dg7a">03-62871111</td>
+                                                        <td class="tg-dg7a">40722</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Dr Rokeshwar Hari Dass</td>
+                                                        <td class="tg-0lax"></td>
+                                                        <td class="tg-0lax">Poliklinik MUC</td>
+                                                        <td class="tg-0lax">9g, Jalan Hentian 1 Hentian Kajang Kajang Selangor 41000 Malaysia</td>
+                                                        <td class="tg-0lax">03-87408940</td>
+                                                        <td class="tg-0lax">66580</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">Mr Kumar Hari Rajah</td>
+                                                        <td class="tg-dg7a">MBBS(MAHE),MS(UM),MRCS(IRELAND),AM</td>
+                                                        <td class="tg-dg7a">KPMC Puchong Specialist Centre</td>
+                                                        <td class="tg-dg7a">No 1 &amp;3, Jalan Puteri 2/1Bandar Puteri Puchong Puchong Selangor 47100 Malaysia</td>
+                                                        <td class="tg-dg7a">03-80624073</td>
+                                                        <td class="tg-dg7a">33483</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Dr Fen Lee Hew</td>
+                                                        <td class="tg-0lax">MBBS MD FRCP FRACP CCD</td>
+                                                        <td class="tg-0lax">Subang Jaya Medical Centre</td>
+                                                        <td class="tg-0lax">1 Jalan SS 12/1A Subang Jaya Selangor 47500 Malaysia</td>
+                                                        <td class="tg-0lax">03-56391212</td>
+                                                        <td class="tg-0lax">32516</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-dg7a">A/P Dr Adibah Hanim Ismail</td>
+                                                        <td class="tg-dg7a">MD, M.Med(Family Medicine)</td>
+                                                        <td class="tg-dg7a">Family Medicine Department, Faculty of Medicine &amp; Health Sciences</td>
+                                                        <td class="tg-dg7a">Universiti Putra MalaysiaSerdang Selangor 43400 Malaysia</td>
+                                                        <td class="tg-dg7a">012-9562930</td>
+                                                        <td class="tg-dg7a">29986</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="tg-0lax">Dr Vishal D Jasani</td>
+                                                        <td class="tg-0lax">MBBS (MAHE,India), MRCOG (UK), Fellowship and Diploma in Minimal Access Surgery(India)</td>
+                                                        <td class="tg-0lax">Pantai Hospital Klang</td>
+                                                        <td class="tg-0lax">Suite 3, Ground floor, Lot 5921, Persiaran Raja Muda Musa Klang Selangor 41200 Malaysia</td>
+                                                        <td class="tg-0lax">603-32585500</td>
+                                                        <td class="tg-0lax">37269</td>
+                                                      </tr>
+                                                    </tbody>
+                                                    </table>
+
+                                    <table class="tg">
+                                        <h2 id="Terengganu">Terengganu</h2>
+                                            <thead>
+                                                <tr>
+                                                    <th class="tg-0lax">Physician</th>
+                                                    <th class="tg-0lax">Qualifications</th>
+                                                    <th class="tg-0lax">Clinic or Hospital Name</th>
+                                                    <th class="tg-0lax">Address</th>
+                                                    <th class="tg-0lax">Main Line</th>
+                                                    <th class="tg-0lax">MMC</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+
+                                        <table class="tg">
+                                            <h2 id="Wilayah Persekutuan Kuala Lumpur">Wilayah Persekutuan Kuala Lumpur</h2>
+                                            <thead>
+                                              <tr>
+                                                <th class="tg-0lax">Physician</th>
+                                                <th class="tg-0lax">Qualifications</th>
+                                                <th class="tg-0lax">Clinic or Hospital Name</th>
+                                                <th class="tg-0lax">Address</th>
+                                                <th class="tg-0lax">Main Line</th>
+                                                <th class="tg-0lax">MMC</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Syed Abdul Rahman Ahmad</td>
+                                                <td class="tg-dg7a">MD,MBA</td>
+                                                <td class="tg-dg7a">Klinik Medi Pesona</td>
+                                                <td class="tg-dg7a">No 1, Ground FloorJalan Bangsar Utama 3 Bangsar Utama Bangsar Wilayah Persekutuan Kuala Lumpur 59000 Malaysia</td>
+                                                <td class="tg-dg7a">03-22881439</td>
+                                                <td class="tg-dg7a">33405</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-0lax">Lawrence Chan</td>
+                                                <td class="tg-0lax">MBBS MRCP FRACP(Cardiology)</td>
+                                                <td class="tg-0lax">Cardiac Vascular Sentral Kuala Lumpur</td>
+                                                <td class="tg-0lax">Jalan Stesen Sentral 5 Kuala Lumpur Sentral Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 50470 Malaysia</td>
+                                                <td class="tg-0lax">03-22767000</td>
+                                                <td class="tg-0lax">27901</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Choong Chor Chang</td>
+                                                <td class="tg-dg7a">MBBS(Malaya), MRCP(UK), Advanced Master of Dermatology (UKM), FAAD (USA)</td>
+                                                <td class="tg-dg7a">Gleneagles Kuala Lumpur</td>
+                                                <td class="tg-dg7a">282-288 Jalan Ampang Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 50450 Malaysia</td>
+                                                <td class="tg-dg7a">03-42516233</td>
+                                                <td class="tg-dg7a">33041</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-0lax">Benjamin Cheah</td>
+                                                <td class="tg-0lax"></td>
+                                                <td class="tg-0lax">Pantai Hospital Kuala Lumpur</td>
+                                                <td class="tg-0lax">No. 8, Jalan Bukit Pantai BangsarKuala Lumpur Wilayah Persekutuan Kuala Lumpur 59100 Malaysia</td>
+                                                <td class="tg-0lax">03-22960888</td>
+                                                <td class="tg-0lax">35374</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Gim-Hooi Choo</td>
+                                                <td class="tg-dg7a"></td>
+                                                <td class="tg-dg7a">Cardiac Vascular Sentral Kuala Lumpur (CVSKL)</td>
+                                                <td class="tg-dg7a">Jalan Stesyen Sentral 5 Kuala Lumpur Sentral Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 50470 Malaysia</td>
+                                                <td class="tg-dg7a">03-22767000</td>
+                                                <td class="tg-dg7a">30878</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-0lax">Dr Fahrurrazi Hamid</td>
+                                                <td class="tg-0lax">MD (UKM)</td>
+                                                <td class="tg-0lax">Majlis Perubatan Malaysia</td>
+                                                <td class="tg-0lax">Aras Bawah Blok BJalan Cenderasari Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 50590 Malaysia</td>
+                                                <td class="tg-0lax">03-26912171</td>
+                                                <td class="tg-0lax">51489</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-dg7a">Dr Gaik Hong Ho</td>
+                                                <td class="tg-dg7a">MBBS (UM)</td>
+                                                <td class="tg-dg7a">Klinik Tan</td>
+                                                <td class="tg-dg7a">441/443 Jalan Ipoh Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 51200 Malaysia</td>
+                                                <td class="tg-dg7a">03-40433563</td>
+                                                <td class="tg-dg7a">22896</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="tg-0lax">Dr Gurdeep Singh Grewal</td>
+                                                <td class="tg-0lax">MBBS(Malaya) MPM(Malaya) CMIA, EMDR(Aust)</td>
+                                                <td class="tg-0lax">The Mind Faculty</td>
+                                                <td class="tg-0lax">Suite 11-G &amp; 11-1 Jalan Solaris 4, Solaris Mont’ Kiara, Jalan Solaris, Off Jalan Duta Kiara,Kuala Lumpur Wilayah Persekutuan Kuala Lumpur 50480Malaysia</td>
+                                                <td class="tg-0lax">03-62030733</td>
+                                                <td class="tg-0lax">40722</td>
+                                              </tr>
+                                            </tbody>
+                                            </table>
+</body>
+</html>
