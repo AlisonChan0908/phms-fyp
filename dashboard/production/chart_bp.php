@@ -13,10 +13,10 @@
 ?>
 <?php
 /* Database connection settings */
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'taro';
+$host = 'us-cdbr-east-02.cleardb.com';
+$user = 'baf5ca15029df6';
+$pass = '8111c740';
+$db = 'heroku_79fc0f987d687d0';
 $con = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 $pa_id = $_SESSION['pa_id'];
