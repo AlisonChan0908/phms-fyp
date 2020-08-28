@@ -13,10 +13,10 @@
 ?>
 <?php
 /* Database connection settings */
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'taro';
+$host = 'us-cdbr-east-02.cleardb.com';
+$user = 'baf5ca15029df6';
+$pass = '8111c740';
+$db = 'heroku_79fc0f987d687d0';
 $con = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 $pa_id = $_SESSION['pa_id'];
@@ -40,10 +40,10 @@ $pa_id = $_SESSION['pa_id'];
 
 <?php
 /* Database connection settings */
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'taro';
+$host = 'us-cdbr-east-02.cleardb.com';
+$user = 'baf5ca15029df6';
+$pass = '8111c740';
+$db = 'heroku_79fc0f987d687d0';
 $con = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 $pa_id = $_SESSION['pa_id'];
@@ -67,10 +67,10 @@ $pa_id = $_SESSION['pa_id'];
 
 <?php
 /* Database connection settings */
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'taro';
+$host = 'us-cdbr-east-02.cleardb.com';
+$user = 'baf5ca15029df6';
+$pass = '8111c740';
+$db = 'heroku_79fc0f987d687d0';
 $con = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 $pa_id = $_SESSION['pa_id'];
@@ -96,10 +96,10 @@ $pa_id = $_SESSION['pa_id'];
 ?>
 <?php
 /* Database connection settings */
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'taro';
+$host = 'us-cdbr-east-02.cleardb.com';
+$user = 'baf5ca15029df6';
+$pass = '8111c740';
+$db = 'heroku_79fc0f987d687d0';
 $con = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 
 $pa_id = $_SESSION['pa_id'];
@@ -375,7 +375,7 @@ $pa_id = $_SESSION['pa_id'];
                                                     <?php
                                                     /* Attempt MySQL server connection. Assuming you are running MySQL
                      server with default setting (user 'root' with no password) */
-                                                    $link = mysqli_connect("localhost", "root", "", "taro");
+                                                    $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
 
                                                     // Check connection
                                                     if ($link === false) {
