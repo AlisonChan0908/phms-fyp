@@ -1,0 +1,75 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\xampp\php;C:\Users\User\AppData\Roaming\npm;C:\Users\User\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\xampp\htdocs\Taro\dashboard\package.json: Unexpected token } in JSON at position 1012
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "gentelella",
+    "version": "2.0-beta2",
+    "description": "Gentelella Admin is a free to use Bootstrap admin template",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/puikinsh/gentelella.git"
+    },
+    "keywords": [
+      "css",
+      "js",
+      "html",
+      "template",
+      "admin",
+      "bootstrap",
+      "theme",
+      "backend",
+      "responsive"
+    ],
+    "author": "Aigars Silkalns",
+    "contributors": [
+      "Christian Esperar"
+    ],
+    "license": "MIT",
+    "main": "build/js/custom.min.js",
+    "bugs": {
+      "url": "https://github.com/puikinsh/gentelella/issues"
+    },
+    "homepage": "https://github.com/puikinsh/gentelella#readme",
+    "devDependencies": {
+      "browser-sync": "^2.26.7",
+      "gulp-autoprefixer": "^7.0.1",
+  	"gulp-concat": "^2.6.1",
+      "gulp-rename": "^2.0.0",
+      "gulp-ruby-sass": "^4.0.0",
+      "gulp-uglify": "^3.0.2"
+    },
+    "dependencies": {
+      "gentelella": "^1.4.0",
+      "gulp": "^4.0.2",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
