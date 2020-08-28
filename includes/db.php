@@ -1,5 +1,5 @@
 <?php 
 
-$con = mysqli_connect("baf5ca15029df6","root","8111c740","taro");
+$con = mysqli_connect('us-cdbr-east-02.cleardb.com', 'baf5ca15029df6', '8111c740', 'taro');
 
 ?>
