@@ -1,10 +1,10 @@
 <?php
 
 error_reporting(0);
-$dbhost="localhost";
-$dbuser="root";
-$dbpass="";
-$dbname="taro";
+$dbhost="us-cdbr-east-02.cleardb.com";
+$dbuser="baf5ca15029df6";
+$dbpass="8111c740";
+$dbname="heroku_79fc0f987d687d0";
 
 $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
