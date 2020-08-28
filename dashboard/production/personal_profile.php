@@ -369,7 +369,7 @@ if (isset($_GET['logout'])) {
                                                     <?php
                                                     /* Attempt MySQL server connection. Assuming you are running MySQL
                      server with default setting (user 'root' with no password) */
-                                                    $link = mysqli_connect("localhost", "root", "", "taro");
+                                                    $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
 
                                                     // Check connection
                                                     if ($link === false) {
@@ -497,7 +497,7 @@ if (isset($_GET['logout'])) {
                                             <?php
                                             /* Attempt MySQL server connection. Assuming you are running MySQL
                         server with default setting (user 'root' with no password) */
-                                            $link = mysqli_connect("localhost", "root", "", "taro");
+                                            $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
 
                                             // Check connection
                                             if ($link === false) {
@@ -547,7 +547,7 @@ if (isset($_GET['logout'])) {
                                                     <?php
                                                     /* Attempt MySQL server connection. Assuming you are running MySQL
                         server with default setting (user 'root' with no password) */
-                                                    $link = mysqli_connect("localhost", "root", "", "taro");
+                                                    $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
 
                                                     // Check connection
                                                     if ($link === false) {
