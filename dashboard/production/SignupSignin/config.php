@@ -15,7 +15,7 @@ $google_client->setClientId('719944339176-3noalf2uoj8cjukfcck8u85nfjs0bvj8.apps.
 $google_client->setClientSecret('PhWkzXfLIxn9SPkXyO1Oc9Uw');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('http://localhost/Taro/dashboard/production/SignupSignin/signin.php');
+$google_client->setRedirectUri('https://phms-fyp.herokuapp.com/dashboard/production/SignupSignin/signin.php');
 
 //
 $google_client->addScope('email');
