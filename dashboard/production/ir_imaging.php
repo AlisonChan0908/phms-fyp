@@ -334,7 +334,7 @@ if (isset($_GET['logout'])) {
                             </tr>
                           </thead>
                           <?php
-                              $link = mysqli_connect("localhost", "root", "", "taro");
+                              $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
                           $sql="SELECT * FROM ir_imaging";
                           $result = mysqli_query($link, $sql);
                           while($row=mysqli_fetch_array($result))
