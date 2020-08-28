@@ -50,7 +50,7 @@ if (isset($_GET["code"])) {
         $username = $data['given_name'];
         $email = $data['email'];
 
-        $mysqli = mysqli_connect("localhost", "root", "", "taro");
+        $mysqli = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
         $link = "SELECT * FROM users WHERE email='" . $email . "'";
         $result = $mysqli->query($link);
         $fetch_result = $result->fetch_assoc();
