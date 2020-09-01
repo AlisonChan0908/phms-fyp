@@ -313,8 +313,8 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Record Your Insurance<small></small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
+                  <h2>Record Your Insurance<small> or  <a href = "insurance_doc.php">Click here to store your insurance documents</a></small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
