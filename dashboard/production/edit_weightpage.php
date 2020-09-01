@@ -354,7 +354,7 @@
                 <h3>Weight <small></small></h3>
               </div>
               <div class="clearfix"></div>
-<!--BMI levels-->
+<!-- BMI Levels -->
 <?php
     include "../../includes/db.php";
 
@@ -371,35 +371,38 @@
     $result4 = $result2->fetch_row();
 
 
+if($result3 == 0 ){
+    $result3 = 1;
+} else {
     $result3 = (double)$result3[0];
+}
+
+
+if($result4 == 0 ){
+    $result4 = 1;
+} else {
     $result4 = (double)$result4[0];
+}
+    
 
     $resultextreme = (pow(($result4 / 100),2)) ;
    
-//     var_dump($result3);
- //var_dump((double) $resultextreme);
-// var_dump((double) $result4);
-
-
     $result5 = $result3 /$resultextreme;
-//var_dump($result5);
 
-    // $result3 = $result3[0];
 
-    if ((double)$result5 <18.5 ) {
+    if ((double)$result5 <18.5 && $result5 > 1) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the underweight range.</div>";
     } else if ((double)$result5 >= 18.5 && $result5 < 25 ) {
         echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your BMI falls within the normal.</div>";
     } else if ((double)$result5 >= 25.0 && $result5 < 30 ) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the overweight range.</div>";
+    } else if ((double)$result3 == 1 || $result4 == 1 ) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your weight and height.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the obese range.</div>";
     }
 
-
-
     ?>
-           
 
             <div class="clearfix"></div>
 
