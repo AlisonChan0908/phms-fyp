@@ -378,28 +378,44 @@
     $result5 = $result2->fetch_row();
     $result6 = $result3->fetch_row();
 
-    $result4 = (string)$result4[0];
-    $result5 = (string)$result5[0];
-    $result6 = (double)$result6[0];
+    
+
+    if($result4  == "NULL"  ){
+        $result4 = 1;
+    } else {
+        $result4 = (string)$result4[0];
+    }
+    
+    
+    if($result5  == "NULL"){
+        $result5 = 1;
+    } else {
+        $result5 = (string)$result5[0];
+    }
+
+    if($result6 == 0 ){
+        $result6 = 1;
+    } else {
+        $result6 = (double)$result6[0];
+    }
    
-  //  var_dump($result3);
-// $result3 = $result3[0];
 
-
-if ((string)$result4 == "Before breakfast" || "Before lunch" || "Before dinner" || "Fasting"  && (string)$result5 == "No" && (double)$result6 <100 ) {
+if ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" || (string)$result4 =="Before dinner" || (string)$result4 =="Fasting"  && (string)$result5 == "No" && (double)$result6 <100 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "Before breakfast" || "Before lunch" || "Before dinner" || "Fasting"  && (string)$result5 == "Yes" && (double)$result6 <80 && (double)$result6 <130  ) {
+} elseif ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" || (string)$result4 =="Before dinner" || (string)$result4 =="Fasting"  && (string)$result5 == "Yes" && (double)$result6 >80 && (double)$result6 <130  ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "After breakfast" || "After lunch" || "After dinner" && (string)$result5 == "No" && (double)$result6 <140 ) {
+} elseif ((string)$result4 == "After breakfast" || (string)$result4 =="After lunch" || (string)$result4 =="After dinner" && (string)$result5 == "No" && (double)$result6 <140 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "After breakfast" || "After lunch" || "After dinner" && (string)$result5 == "Yes" && (double)$result6 <180 ) {
+} elseif ((string)$result4 == "After breakfast" || (string)$result4 =="After lunch" ||(string)$result4 == "After dinner" && (string)$result5 == "Yes" && (double)$result6 <180 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
+} elseif ((string)$result4 == 1 || (string)$result5 == 1 || (double)$result6 == 1 ) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your blood glucose.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your blood glucose is not normal.</div>";
 }   
      
-
     ?>
+
 
         
 <script>
