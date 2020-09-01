@@ -138,7 +138,7 @@ if (isset($_GET['logout'])) {
               ?>
 
 
-              <a href="personal_profile.php"><button type="button" class="btn btn-round btn-info">Back to Image Upload</button></a>
+              <a href="personal_profile.php"><button type="button" class="btn btn-round btn-info">Back to Profile Picture Upload</button></a>
               </br>
               </br>
               </br>
