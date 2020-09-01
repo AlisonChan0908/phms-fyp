@@ -128,7 +128,7 @@ if (isset($_GET['logout'])) {
               ?>
 
 
-              <a href="breast_imaging.php"><button type="button" class="btn btn-round btn-info">Back to Imaging Reports</button></a>
+              <a href="breast_imaging.php"><button type="button" class="btn btn-round btn-info">Back to Breast Imaging Reports</button></a>
               </br>
               </br>
               </br>
