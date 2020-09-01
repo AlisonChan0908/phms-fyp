@@ -62,7 +62,7 @@ if (isset($_GET["code"])) {
             $pa_id = $fetch_result['pa_id'];
         }
     }
-    header('location: ../../..//index.php');
+    header('location: https://phms-fyp.herokuapp.com/dashboard/production/index.php');
 }
 
 
@@ -72,7 +72,7 @@ if (!isset($_SESSION['access_token'])) {
     //Create a URL to obtain user authorization
     $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img src="./images/sign-in-with-google.png" /></a>';
 } else {
-    header('location: ../../../index.php');
+    header('location: https://phms-fyp.herokuapp.com/dashboard/production/index.php');
 }
 
 
