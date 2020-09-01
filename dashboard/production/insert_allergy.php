@@ -28,7 +28,7 @@ if(mysqli_num_rows($result) > 0)
     {
 //If it exists, don't insert it
 
-        echo 'Record already exists. </br> <a href="edit_allergy.php">Back to edit weight</a>';
+        echo 'Record already exists. </br> <a href="edit_allergy.php">Back to add allergy</a>';
         
     }
 //If it does not exist, then insert it
