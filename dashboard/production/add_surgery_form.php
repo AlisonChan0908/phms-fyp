@@ -3,7 +3,7 @@
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: login.php');
+  	header('location: SignupSignin/signin.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
@@ -228,7 +228,7 @@
                           <span>Settings</span>
                         </a>
                     <a class="dropdown-item"  href="javascript:;">Help</a>
-                      <a class="dropdown-item"  href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item"  href="SignupSignin/signin.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
   
