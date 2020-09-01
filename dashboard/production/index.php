@@ -416,8 +416,8 @@ $pa_id = $_SESSION['pa_id'];
           </div>
         <!-- top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
+         <!-- page content -->
+         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
@@ -435,9 +435,11 @@ $pa_id = $_SESSION['pa_id'];
                         </button>
                       </div>
                       <div class="modal-body">
-                        
+         
+                      </br>                   
+<strong style="color:black;" >BMI Levels</strong>
 <!-- BMI Levels -->
-    <?php
+<?php
     include "../../includes/db.php";
 
     $pa_id = $_SESSION['pa_id'];
@@ -453,32 +455,36 @@ $pa_id = $_SESSION['pa_id'];
     $result4 = $result2->fetch_row();
 
 
+if($result3 == 0 ){
+    $result3 = 1;
+} else {
     $result3 = (double)$result3[0];
+}
+
+
+if($result4 == 0 ){
+    $result4 = 1;
+} else {
     $result4 = (double)$result4[0];
+}
+    
 
     $resultextreme = (pow(($result4 / 100),2)) ;
    
-//     var_dump($result3);
- //var_dump((double) $resultextreme);
-// var_dump((double) $result4);
-
-
     $result5 = $result3 /$resultextreme;
-//var_dump($result5);
 
-    // $result3 = $result3[0];
 
-    if ((double)$result5 <18.5 ) {
+    if ((double)$result5 <18.5 && $result5 > 1) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the underweight range.</div>";
     } else if ((double)$result5 >= 18.5 && $result5 < 25 ) {
         echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your BMI falls within the normal.</div>";
     } else if ((double)$result5 >= 25.0 && $result5 < 30 ) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the overweight range.</div>";
+    } else if ((double)$result3 == 1 || $result4 == 1 ) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your weight and height.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your BMI falls within the obese range.</div>";
     }
-
-
 
     ?>
 
@@ -501,44 +507,71 @@ $pa_id = $_SESSION['pa_id'];
     $result5 = $result2->fetch_row();
     $result6 = $result3->fetch_row();
 
-    $result4 = (double)$result4[0]; //ldl
-    $result5 = (double)$result5[0]; //hdl
-    $result6 = (double)$result6[0]; //total_cho
   
-   
-    // var_dump($result6);
-    // $result3 = $result3[0];
+    if($result4 == 0 ){
+        $result4 = 1;
+    } else {
+        $result4 = (double)$result4[0]; //ldl
+    }
+    
+    
+    if($result5 == 0 ){
+        $result5 = 1;
+    } else {
+        $result5 = (double)$result5[0]; //hdl;
+    }
+
+    if($result6 == 0 ){
+        $result6 = 1;
+    } else {
+        $result6 = (double)$result6[0]; //total_cho
+    }
+?>
+</br>
+<strong style="color:black;" >LDL Cholesterol Levels (Bad Cholesterol)</strong>
+<?php
 //if else for ldl
 
-    if ((double)$result4 <100 ) {
+    if ((double)$result4 <100 && $result4 >1 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is optimal.</div>";
-    } else if ((double)$result5 >= 100 && $result5 < 129 ) {
+    } else if ((double)$result4 >= 100 && $result4 < 129 ) {
         echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is near optimal/above optimal.</div>";
-    } else if ((double)$result5 >= 130 && $result5 < 159 ) {
+    } else if ((double)$result4 >= 130 && $result4 < 159 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is borderline high.</div>";
-    } else if ((double)$result5 >= 160 && $result5 < 189 ) {
+    } else if ((double)$result4 >= 160 && $result4 < 189 ) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is high.</div>";
+    } else if ((double)$result4 == 1) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is very high.</div>";
     }
-
-
-  // HDL Cholesterol Levels (Good Cholesterol)
-
-  if ((double)$result5 <40 ) {
+?>
+</br>
+<strong style="color:black;" >HDL Cholesterol Levels (Good Cholesterol)</strong>
+  
+<?php
+// HDL Cholesterol Levels (Good Cholesterol)
+  if ((double)$result5 <40 && $result5 >1 ) {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your HDL cholesterol level is a major risk for heart disease.</div>";
 } else if ((double)$result5 >= 40 && $result5 < 59 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is normal. The higher, the better</div>";
+} else if ((double)$result5 == 1 ) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
 } else {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is considered protective against heart disease.</div>";
 }
-
+?>
+</br>
+<strong style="color:black;" >Total Cholesterol Levels</strong>
+<?php
 
   // Total Cholesterol Levels
-  if ((double)$result6 <200 ) {
+  if ((double)$result6 <200 && $result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your total cholesterol level is desirable.</div>";
-} else if ((double)$result5 >= 200 && $result5 < 239 ) {
+} else if ((double)$result6 >= 200 && $result6 < 239 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your total cholesterol level borderline high.</div>";
+} else if ((double)$result4 == 1 || $result5 == 1 || $result6 == 1) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your total cholesterol level is high.</div>";
 }
@@ -546,12 +579,9 @@ $pa_id = $_SESSION['pa_id'];
 
 
     ?>
-
     
-
-
-
-
+    </br>
+<strong style="color:black;" >Blood Pressure Levels</strong>
 <!-- Systolic BP Levels (the first number) – indicates how much pressure your blood is exerting against your artery walls when the heart beats.) -->
 <!-- Diastolic BP Levels (the second number) – indicates how much pressure your blood is exerting against your artery walls while the heart is resting between beats. -->
 <?php
@@ -564,14 +594,26 @@ $pa_id = $_SESSION['pa_id'];
     $result1 = $con->query($query1);
     $result2 = $con->query($query2);
 
+   
     $result3 = $result1->fetch_row();
     $result4 = $result2->fetch_row();
 
-    $result3 = (double)$result3[0];
-    $result4 = (double)$result4[0];
+
+    if($result3 == 0 ){
+        $result3 = 1;
+    } else {
+        $result3 = (double)$result3[0];
+    }
+    
+    
+    if($result4 == 0 ){
+        $result4 = 1;
+    } else {
+        $result4 = (double)$result4[0];
+    }
 
 
-    if ((double)$result3 <120 && (double)$result4 <80 ) {
+    if ((double)$result3 <120 && (double)$result3 >1 && (double)$result4 <80 && (double)$result4 >1 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood pressure is normal.</div>";
    
     } else if (((double)$result3 >=120 && (double)$result3 <=129 ) && ((double)$result4 <80 )) {
@@ -583,12 +625,15 @@ $pa_id = $_SESSION['pa_id'];
     } else if (((double)$result3 >=140 && (double)$result4 >=90 )) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your have high blood pressure. (Hypertension Stage 2)</div>";
     
+    } else if ((double)$result3 == 1 || $result4 == 1 ) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your systolic and diastolic blood pressure.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your are facing hypertensive crisis. Consult your doctor immediately.</div>";
     }
+
     ?>
-
-
+</br>
+<strong style="color:black;" >Blood Glucose Levels</strong>
 <!-- Blood Glucose Levels -->
 <?php
     include "../../includes/db.php";
@@ -602,31 +647,48 @@ $pa_id = $_SESSION['pa_id'];
     $result1 = $con->query($query1);
     $result2 = $con->query($query2);
     $result3 = $con->query($query3);
+    
    
     $result4 = $result1->fetch_row();
     $result5 = $result2->fetch_row();
     $result6 = $result3->fetch_row();
 
-    $result4 = (string)$result4[0];
-    $result5 = (string)$result5[0];
-    $result6 = (double)$result6[0];
+    
+
+    if($result4  == "NULL"  ){
+        $result4 = 1;
+    } else {
+        $result4 = (string)$result4[0];
+    }
+    
+    
+    if($result5  == "NULL"){
+        $result5 = 1;
+    } else {
+        $result5 = (string)$result5[0];
+    }
+
+    if($result6 == 0 ){
+        $result6 = 1;
+    } else {
+        $result6 = (double)$result6[0];
+    }
    
-  //  var_dump($result3);
-// $result3 = $result3[0];
 
-
-if ((string)$result4 == "Before breakfast" || "Before lunch" || "Before dinner" || "Fasting"  && (string)$result5 == "No" && (double)$result6 <100 ) {
+if ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" || (string)$result4 =="Before dinner" || (string)$result4 =="Fasting"  && (string)$result5 == "No" && (double)$result6 <100 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "Before breakfast" || "Before lunch" || "Before dinner" || "Fasting"  && (string)$result5 == "Yes" && (double)$result6 <80 && (double)$result6 <130  ) {
+} elseif ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" || (string)$result4 =="Before dinner" || (string)$result4 =="Fasting"  && (string)$result5 == "Yes" && (double)$result6 >80 && (double)$result6 <130  ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "After breakfast" || "After lunch" || "After dinner" && (string)$result5 == "No" && (double)$result6 <140 ) {
+} elseif ((string)$result4 == "After breakfast" || (string)$result4 =="After lunch" || (string)$result4 =="After dinner" && (string)$result5 == "No" && (double)$result6 <140 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
-} elseif ((string)$result4 == "After breakfast" || "After lunch" || "After dinner" && (string)$result5 == "Yes" && (double)$result6 <180 ) {
+} elseif ((string)$result4 == "After breakfast" || (string)$result4 =="After lunch" ||(string)$result4 == "After dinner" && (string)$result5 == "Yes" && (double)$result6 <180 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
+} elseif ((string)$result4 == 1 || (string)$result5 == 1 || (double)$result6 == 1 ) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your blood glucose.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your blood glucose is not normal.</div>";
 }   
-    
+     
     ?>
 
         
@@ -641,7 +703,8 @@ for (i = 0; i < close.length; i++) {
     setTimeout(function(){ div.style.display = "none"; }, 600);
   }
 }
-</script></br>
+</script>
+</br>
  <p style= color:blue;>Keep up the good work if you do not receive any alerts. Maintain a balanced diet and stay healthy.</p>  
  <p style= color:red;>Please consult a physician immediately if you receive an alert.</p>     
                       </div>
