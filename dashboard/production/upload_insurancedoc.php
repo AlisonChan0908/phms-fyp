@@ -127,7 +127,7 @@ if (isset($_GET['logout'])) {
               ?>
 
 
-              <a href="insurance_doc.php"><button type="button" class="btn btn-round btn-info">Back to Image Upload</button></a>
+              <a href="insurance_doc.php"><button type="button" class="btn btn-round btn-info">Back to Uploading Insurance Documents</button></a>
               </br>
               </br>
               </br>
