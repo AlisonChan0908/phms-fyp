@@ -360,6 +360,7 @@
             <div class="clearfix"></div>
 
             <!-- Cholesterol ALert -->
+<!-- LDL Cholesterol ALert -->
 <?php
     include "../../includes/db.php";
 
@@ -377,50 +378,79 @@
     $result5 = $result2->fetch_row();
     $result6 = $result3->fetch_row();
 
-    $result4 = (double)$result4[0]; //ldl
-    $result5 = (double)$result5[0]; //hdl
-    $result6 = (double)$result6[0]; //total_cho
   
-   
-    // var_dump($result6);
-    // $result3 = $result3[0];
+    if($result4 == 0 ){
+        $result4 = 1;
+    } else {
+        $result4 = (double)$result4[0]; //ldl
+    }
+    
+    
+    if($result5 == 0 ){
+        $result5 = 1;
+    } else {
+        $result5 = (double)$result5[0]; //hdl;
+    }
+
+    if($result6 == 0 ){
+        $result6 = 1;
+    } else {
+        $result6 = (double)$result6[0]; //total_cho
+    }
+?>
+</br>
+<strong style="color:black;" >LDL Cholesterol Levels (Bad Cholesterol)</strong>
+<?php
 //if else for ldl
 
-    if ((double)$result4 <100 ) {
+    if ((double)$result4 <100 && $result4 >1 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is optimal.</div>";
-    } else if ((double)$result5 >= 100 && $result5 < 129 ) {
+    } else if ((double)$result4 >= 100 && $result4 < 129 ) {
         echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is near optimal/above optimal.</div>";
-    } else if ((double)$result5 >= 130 && $result5 < 159 ) {
+    } else if ((double)$result4 >= 130 && $result4 < 159 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your LDL cholesterol level is borderline high.</div>";
-    } else if ((double)$result5 >= 160 && $result5 < 189 ) {
+    } else if ((double)$result4 >= 160 && $result4 < 189 ) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is high.</div>";
+    } else if ((double)$result4 == 1) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL cholesterol level.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is very high.</div>";
     }
-
-
-
-   // HDL Cholesterol Levels (Good Cholesterol)
-
-   if ((double)$result5 <40 ) {
+?>
+</br>
+<strong style="color:black;" >HDL Cholesterol Levels (Good Cholesterol)</strong>
+  
+<?php
+// HDL Cholesterol Levels (Good Cholesterol)
+  if ((double)$result5 <40 && $result5 >1 ) {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your HDL cholesterol level is a major risk for heart disease.</div>";
 } else if ((double)$result5 >= 40 && $result5 < 59 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is normal. The higher, the better</div>";
+} else if ((double)$result5 == 1 ) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your HDL cholesterol level.</div>";
 } else {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is considered protective against heart disease.</div>";
 }
-
+?>
+</br>
+<strong style="color:black;" >Total Cholesterol Levels</strong>
+<?php
 
   // Total Cholesterol Levels
-  if ((double)$result6 <200 ) {
+  if ((double)$result6 <200 && $result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your total cholesterol level is desirable.</div>";
-} else if ((double)$result5 >= 200 && $result5 < 239 ) {
+} else if ((double)$result6 >= 200 && $result6 < 239 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your total cholesterol level borderline high.</div>";
+} else if ((double)$result4 == 1 || $result5 == 1 || $result6 == 1) {
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL and HDL cholesterol levels.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your total cholesterol level is high.</div>";
 }
 
-?>
+
+
+    ?>
+
 <script>
 var close = document.getElementsByClassName("closebtn");
 var i;
