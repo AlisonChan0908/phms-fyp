@@ -541,7 +541,7 @@ if($result4 == 0 ){
     } else if ((double)$result4 >= 160 && $result4 < 189 ) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is high.</div>";
     } else if ((double)$result4 == 1) {
-        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL cholesterol level.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is very high.</div>";
     }
@@ -556,7 +556,7 @@ if($result4 == 0 ){
 } else if ((double)$result5 >= 40 && $result5 < 59 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is normal. The higher, the better</div>";
 } else if ((double)$result5 == 1 ) {
-    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your HDL cholesterol level.</div>";
 } else {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is considered protective against heart disease.</div>";
 }
@@ -571,7 +571,7 @@ if($result4 == 0 ){
 } else if ((double)$result6 >= 200 && $result6 < 239 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your total cholesterol level borderline high.</div>";
 } else if ((double)$result4 == 1 || $result5 == 1 || $result6 == 1) {
-    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your LDL and HDL.</div>";
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL and HDL cholesterol levels.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your total cholesterol level is high.</div>";
 }
@@ -626,7 +626,7 @@ if($result4 == 0 ){
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your have high blood pressure. (Hypertension Stage 2)</div>";
     
     } else if ((double)$result3 == 1 || $result4 == 1 ) {
-        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your systolic and diastolic blood pressure.</div>";
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your systolic and diastolic blood pressure.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your are facing hypertensive crisis. Consult your doctor immediately.</div>";
     }
@@ -684,7 +684,7 @@ if ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" 
 } elseif ((string)$result4 == "After breakfast" || (string)$result4 =="After lunch" ||(string)$result4 == "After dinner" && (string)$result5 == "Yes" && (double)$result6 <180 && (double)$result6 >1 ) {
     echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood glucose is normal.</div>";
 } elseif ((string)$result4 == 1 || (string)$result5 == 1 || (double)$result6 == 1 ) {
-    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in the your blood glucose.</div>";
+    echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your blood glucose.</div>";
 } else {
     echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your blood glucose is not normal.</div>";
 }   
