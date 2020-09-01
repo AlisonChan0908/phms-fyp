@@ -366,9 +366,7 @@
                             <option>Before lunch</option>
                             <option>After lunch</option>
                             <option>Before dinner</option>
-                            <option>After dinner</option>
-                            <option>Before sleep</option>
-                            <option>After sleep</option>
+                            <option>After dinner</option>                
                             <option>Fasting</option>
                             <option>Other</option>
                            
