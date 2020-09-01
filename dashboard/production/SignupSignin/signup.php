@@ -60,8 +60,8 @@
                         <figure><img src="images/undraw_medicine_b1ol.png" alt="sign up image"></figure>
                         <a href="signin.php" class="signup-image-link">I am already member</a>
                            <div>
-                                 <h1><i class="fa fa-lemon-o"></i> Taro</h1>
-                                 <p>©2020 All Rights Reserved. Taro. Privacy and Terms</p>
+                                 <h1><i class="fa fa-lemon-o"></i> PHMS</h1>
+                                 <p>©2020 All Rights Reserved. PHMS. Privacy and Terms</p>
                           </div>
                     </div>
                 </div>
