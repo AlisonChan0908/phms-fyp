@@ -139,26 +139,7 @@ if (!isset($_SESSION['access_token'])) {
                             <div class="form-group form-button">
                                 <input type="submit" name="login_user" id="signin" class="form-submit" value="Log in" />
                             </div>
-                            <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div>  -->
-                            <!--Google OnSignin-->
-                            <!-- <script>
-                               function onSignIn(googleUser) {
-                                    var profile = googleUser.getBasicProfile();
-                                    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                                    console.log('Name: ' + profile.getName());
-                                    console.log('Image URL: ' + profile.getImageUrl());
-                                    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-//   http://localhost/Taro/dashboard/production/index.php
-                                    
-                                    // var hostname = location.hostname;
-                                    // console.log('hostname: ' + hostname);
-                                    // window.location.href = "/Taro/dashboard/production/index.php";
-                                    window.location.href = "/Taro/dashboard/production/SignupSignin/signin.php";
-
-                                    }
-
-                                                                    
-                            </script>  -->
+                     
 
                             
                             <?php
@@ -175,8 +156,8 @@ if (!isset($_SESSION['access_token'])) {
 
                         </form>
                         <div>
-                            <h1><i class="fa fa-lemon-o"></i> Taro</h1>
-                            <p>©2020 All Rights Reserved. Taro. Privacy and Terms</p>
+                            <h1><i class="fa fa-lemon-o"></i> PHMS</h1>
+                            <p>©2020 All Rights Reserved. PHMS. Privacy and Terms</p>
                         </div>
                     </div>
                 </div>
