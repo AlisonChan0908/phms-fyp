@@ -120,18 +120,19 @@ if (isset($_GET['logout'])) {
 
           <br />
 
-          <!-- sidebar menu -->
-          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
-              <h3>General</h3>
-              <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="index.php">Dashboard</a></li>
-                    <li><a href="index2.php">Dashboard2</a></li>
-                    <li><a href="index3.php">Dashboard3</a></li>
-                  </ul>
-                </li>
+               <!-- sidebar menu -->
+               <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.php">Dashboard</a></li>
+                      <li><a href="Covid-19/covid19.php">Covid-19</a></li>
+                      <li><a href="../../symptomchecker/main/index.php">Symptom Checker</a></li>
+                    </ul>
+                  </li>
+                  
                 <li><a><i class="fa fa-line-chart"></i> Health Tracking <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="measurements.php">Measurements</a></li>
