@@ -92,7 +92,7 @@ if (!isset($_SESSION['access_token'])) {
     <meta name="google-signin-client_id" content="719944339176-3noalf2uoj8cjukfcck8u85nfjs0bvj8.apps.googleusercontent.com">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign In Form</title>
+    <title>PHMS | Sign In Form</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
