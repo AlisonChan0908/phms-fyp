@@ -119,18 +119,19 @@ if (isset($_GET['logout'])) {
 
           <br />
 
-          <!-- sidebar menu -->
-          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
-              <h3>General</h3>
-              <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="index.php">Dashboard</a></li>
-                    <li><a href="index2.php">Dashboard2</a></li>
-                    <li><a href="index3.php">Dashboard3</a></li>
-                  </ul>
-                </li>
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.php">Dashboard</a></li>
+                      <li><a href="Covid-19/covid19.php">Covid-19</a></li>
+                      <li><a href="../../symptomchecker/main/index.php">Symptom Checker</a></li>
+                    </ul>
+                  </li>
+                  
                 <li><a><i class="fa fa-line-chart"></i> Health Tracking <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="measurements.php">Measurements</a></li>
@@ -346,77 +347,7 @@ if (isset($_GET['logout'])) {
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                          <!--Table of Contents -->
-             <div id="toc_container">
-                <p class="toc_title">Contents</p>
-                <ul class="toc_list">
-                  <li><a href="#1.">1. Bone density scan</a></li>
-                  <li><a href="#2">2. Cardiac PET perfusion</a></li>
-                  <li><a href="#3">3. Cardiac PET sarcoid</a></li>
-                  <li><a href="#4">4. Cardiac PET viability</a>  </li>
-                  <li><a href="#5">5. Cardiac SPECT perfusion</a>  </li>
-                  <li><a href="#6">6. PET/CT scanning</a>  </li>
-                  <ul>
-                        <li><a href="#6.1">6.1 What PET scans do</a></li>
-                  </ul>
-                  <ul>
-                        <li><a href="#6.2">6.2 What CT scans do</a></li>
-                  </ul>
-                  <ul>
-                        <li><a href="#6.3">6.3 How a combined PET/CT scan improves on separate scans</a></li>
-                  </ul>
-                 
-
-                
-                </div>                 
-                <!-- Info Start -->
-                <div class=types>
-                <p>
-                <h3 class=topic id="1">Bone density scan</h3>
-                A <strong>bone density test</strong>, also known as bone mass measurement or bone mineral density test, measures the strength and density of your bones and, when the test is repeated sometime later, can help determine how quickly you are losing bone mass and density. These tests are painless, noninvasive, and safe. They compare your bone density with standards for what is expected in someone of your age, gender, and size, and to the optimal peak bone density of a healthy young adult of the same gender. 
-                </br></br>
-                <strong id="1.1">Bone density testing can help to:</strong>
-
-               - Detect low bone density before a fracture occurs.
-               - Confirm a diagnosis of osteoporosis if you have already fractured.
-               - Predict your chances of fracturing in the future.
-               - Determine your rate of bone loss and/or monitor the effects of treatment if the test is conducted at intervals of a year or more.
-                </br></br>
-             
-                 </p>
-                <p>
-                <h3 class=topic id="2">Cardiac PET perfusion</h3>
-                An evaluation of the blood flow (perfusion) to the walls of your heart using a high resolution PET scanner. Usually performed using a cardiac stress test.
-                </p>
-                <p>
-                <h3 class=topic id="3">Cardiac PET sarcoid</h3>
-                Similar to Cardiac PET Viability except with different eating instructions prior to the exam. An evaluation of the functional status of the heart (viability) and whether the heart has suffered permanent damage from sarcoidosis.
-                </p>
-                <p>
-                <h3 class=topic id="4">Cardiac PET viability</h3>
-                An evaluation of the functional status of the heart (viability) and whether the heart has suffered permanent damage.
-                </p>
-                <p>
-                <h3 class=topic id="5">Cardiac SPECT perfusion</h3>
-                An evaluation of the blood flow (perfusion) to the walls of your heart. Usually performed using a cardiac stress test.
-                </p>
-                <p>
-                <h3 class=topic id="6">PET/CT scanning</h3>
-                Combined PET/CT scans provide images that pinpoint the location of abnormal metabolic activity within the body. The combined scans have been shown to provide more accurate diagnoses than the two scans performed separately.
-                </br></br>
-                <strong id="6.1">What PET scans do</strong> </br>
-                PET, or positron emission tomography, monitors the biochemical functioning of cells by detecting how they process certain compounds, such as glucose (sugar). Cancer cells metabolize glucose at a much higher level than normal tissues.
-                </br> 
-                By detecting increased glucose use with a high degree of sensitivity, PET identifies cancerous cells—even at an early stage when other modalities may miss them. However, PET cannot pinpoint the exact size and location of tumors to a precision necessary for optimal diagnosis and treatment planning.
-                </br></br><strong id="6.2">What CT scans do</strong> </br>
-                CT, or computed tomography, yields a detailed picture of the body's anatomical structures by taking cross-sectional images or X-ray slices of the body. While CT does an excellent job of depicting structures and anatomy, it may miss small or early stage tumors.
-                </br></br>
-                <strong id="6.3">How a combined PET/CT scan improves on separate scans</strong></br>
-                Currently, doctors can overlay the results of PET and CT scans performed separately to identify and locate tumors. However, because a patient may not be positioned identically for both scans, the two images can be difficult to line up exactly, degrading the accuracy of the diagnostic information.
-                </br> </br>
-                The combined PET/CT machine allows doctors to rapidly perform both scans in one session without having to move the patient. This means doctors can precisely overlay the metabolic data of the PET scan and the detailed anatomic data of the CT scan to pinpoint the location and stage of tumors.
-
-            </p>
+                         
                 </div>
                   </div>
                 </div>
