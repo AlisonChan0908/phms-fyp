@@ -29,7 +29,7 @@ if(mysqli_num_rows($result) > 0)
     {
 //If it exists, don't insert it
 
-        echo 'Record already exists. </br> <a href="add_medcard_form.php">Back to add insurance record</a>';
+        echo 'Record already exists. </br> <a href="add_medcard_form.php">Back to add medical card record</a>';
         
     }
 //If it does not exist, then insert it
