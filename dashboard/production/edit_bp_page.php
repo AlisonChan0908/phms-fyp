@@ -372,20 +372,26 @@
     $result1 = $con->query($query1);
     $result2 = $con->query($query2);
 
-    
    
     $result3 = $result1->fetch_row();
     $result4 = $result2->fetch_row();
 
 
-    $result3 = (double)$result3[0];
-    $result4 = (double)$result4[0];
+    if($result3 == 0 ){
+        $result3 = 1;
+    } else {
+        $result3 = (double)$result3[0];
+    }
+    
+    
+    if($result4 == 0 ){
+        $result4 = 1;
+    } else {
+        $result4 = (double)$result4[0];
+    }
 
-   
- //    var_dump($result4);
- // $result3 = $result3[0];
 
-    if ((double)$result3 <120 && (double)$result4 <80 ) {
+    if ((double)$result3 <120 && (double)$result3 >1 && (double)$result4 <80 && (double)$result4 >1 ) {
         echo "<div class="."alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your blood pressure is normal.</div>";
    
     } else if (((double)$result3 >=120 && (double)$result3 <=129 ) && ((double)$result4 <80 )) {
@@ -397,11 +403,11 @@
     } else if (((double)$result3 >=140 && (double)$result4 >=90 )) {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your have high blood pressure. (Hypertension Stage 2)</div>";
     
+    } else if ((double)$result3 == 1 || $result4 == 1 ) {
+        echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your systolic and diastolic blood pressure.</div>";
     } else {
         echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your are facing hypertensive crisis. Consult your doctor immediately.</div>";
     }
-
-
 
     ?>
 
