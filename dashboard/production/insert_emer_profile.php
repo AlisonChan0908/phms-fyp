@@ -1,3 +1,5 @@
+
+
 <?php
 session_start();
 /* Attempt MySQL server connection. Assuming you are running MySQL
