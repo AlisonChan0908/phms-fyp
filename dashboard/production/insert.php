@@ -1,3 +1,25 @@
+
+
+<html>
+    <head>
+    <style>
+  
+       
+.alert {
+  padding: 20px;
+  background-color: #FFFAFA;
+  color:#FA8072;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+
+
+    </style>
+    </head>
+</html>
+
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -23,7 +45,10 @@ if(mysqli_num_rows($result) > 0)
     {
 //If it exists, don't insert it
 
-        echo 'Record already exists. </br> <a href="add_latest_weight_form.php">Back to add weight</a>';
+echo '<div class="alert">
+                        
+<strong> Record already exists. <strong> </br></br> <a href="add_latest_weight_form.php">Back to add weight.</a>
+ </div>';
         
     }
 //If it does not exist, then insert it
