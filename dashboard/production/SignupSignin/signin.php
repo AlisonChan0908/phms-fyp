@@ -68,12 +68,12 @@ if (isset($_GET["code"])) {
 
 
 //This is for check user has login into system by using Google account, if User not login into system then it will execute if block of code and make code for display Login link for Login using Google account.
-if (!isset($_SESSION['access_token'])) {
+//if (!isset($_SESSION['access_token'])) {
     //Create a URL to obtain user authorization
-    $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img src="./images/sign-in-with-google.png" /></a>';
-} else {
-    header('location: https://phms-fyp.herokuapp.com/dashboard/production/index.php');
-}
+//    $login_button = '<a href="' . $google_client->createAuthUrl() . '"><img src="./images/sign-in-with-google.png" /></a>';
+//} else {
+//    header('location: https://phms-fyp.herokuapp.com/dashboard/production/index.php');
+//}
 
 
 
