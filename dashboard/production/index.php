@@ -543,7 +543,7 @@ if($result4 == 0 ){
     } else if ((double)$result4 == 1) {
         echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL cholesterol level.</div>";
     } else {
-        echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is very high.</div>";
+        echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your LDL cholesterol level is very high. Please consult a physician immediately.</div>";
     }
 ?>
 </br>
@@ -552,7 +552,7 @@ if($result4 == 0 ){
 <?php
 // HDL Cholesterol Levels (Good Cholesterol)
   if ((double)$result5 <40 && $result5 >1 ) {
-    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your HDL cholesterol level is a major risk for heart disease.</div>";
+    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your HDL cholesterol level is a major risk for heart disease. Please consult a physician immediately.</div>";
 } else if ((double)$result5 >= 40 && $result5 < 59 ) {
     echo "<div class="." alertinfo"."> <span class="."closebtn"." >&times;</span> <strong>Info!</strong> Your HDL cholesterol level is normal. The higher, the better</div>";
 } else if ((double)$result5 == 1 ) {
@@ -573,7 +573,7 @@ if($result4 == 0 ){
 } else if ((double)$result4 == 1 || $result5 == 1 || $result6 == 1) {
     echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your LDL and HDL cholesterol levels.</div>";
 } else {
-    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your total cholesterol level is high.</div>";
+    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your total cholesterol level is high. Please consult a physician immediately.</div>";
 }
 
 
@@ -686,7 +686,7 @@ if ((string)$result4 == "Before breakfast" || (string)$result4 =="Before lunch" 
 } elseif ((string)$result4 == 1 || (string)$result5 == 1 || (double)$result6 == 1 ) {
     echo "<div class="."alertwarning"."> <span class="."closebtn"." >&times;</span> <strong>Notice!</strong> Please key in your blood glucose.</div>";
 } else {
-    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your blood glucose is not normal.</div>";
+    echo "<div class="."alert"."> <span class="."closebtn"." >&times;</span> <strong>Alert!</strong> Your blood glucose is not normal. Please consult a physician immediately.</div>";
 }   
      
     ?>
@@ -706,7 +706,7 @@ for (i = 0; i < close.length; i++) {
 </script>
 </br>
  <p style= color:blue;>Keep up the good work if you do not receive any alerts. Maintain a balanced diet and stay healthy.</p>  
- <p style= color:red;>Please consult a physician immediately if you receive an alert.</p>     
+ <p style= color:red;><strong>Please consult a physician immediately if you receive an alert.</strong></p>     
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-round btn-secondary" data-dismiss="modal">Close</button>
