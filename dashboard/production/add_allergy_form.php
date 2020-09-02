@@ -179,12 +179,15 @@
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-calculator"></i> Health Calculators <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-question-circle"></i> Help Centre <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="health_cal.php">Health Calculators</a></li>
+                      <li><a href="howtouse.php">How To Use</a></li>
+                      <li><a href="contactus.php">Contact Us</a></li>
+                      <li><a href="faqs.php">FAQs</a></li>
                     
                     </ul>
                   </li>
+
 
 
 
