@@ -52,6 +52,13 @@ if (isset($_GET['logout'])) {
         .logout {
             font-size: 15px;
         }
+        img {
+  display: block;
+  max-width:500px;
+  max-height:345px;
+  width: auto;
+  height: auto;
+}
     </style>
 </head>
 
@@ -452,7 +459,7 @@ if (isset($_GET['logout'])) {
                                                 while ($row = $query->fetch_assoc()) {
                                                     $imageURL = 'uploadspropic/' . $row["file_name"];
                                             ?>
-                                                    <img src="<?php echo $imageURL; ?>" alt="profile pic" width="200" height="250" />
+                                                    <img src="<?php echo $imageURL; ?>" alt="profile pic"  />
                                                 <?php }
                                             } else { ?>
                                                 <p>No image(s) found...</p>
