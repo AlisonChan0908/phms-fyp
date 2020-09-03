@@ -138,7 +138,7 @@ $pa_id = $_SESSION['pa_id'];
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php">Dashboard</a></li>
-                      <li><a href="Covid-19/covid19.php">Covid-19</a></li>
+                      <li><a href="Covid-19/covid19.php">COVID-19</a></li>
                       <li><a href="../../symptomchecker/main/index.php">Symptom Checker</a></li>
                     </ul>
                   </li>
