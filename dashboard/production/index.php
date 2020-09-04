@@ -159,7 +159,7 @@ $pa_id = $_SESSION['pa_id'];
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
-    <style type="text/css">
+    <style>
         .user1 {
             font-size: 18px;
             text-align:left;
@@ -168,13 +168,6 @@ $pa_id = $_SESSION['pa_id'];
         .logout {
             font-size: 15px;
         }
-        #canvas-holder {
-        background-color: #FFFFFF;
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        right: 8px;
-        bottom: 8px;}
     </style>
   </head>
 
@@ -664,7 +657,7 @@ for (i = 0; i < close.length; i++) {
               </div>
 <!--Start Chart Content -->
 <div class="container">	
-<div style="position:absolute; top:120px; left:250px; width:580px; height:580px;" id="canvas-holder">    
+<div style="position:absolute; top:120px; left:250px; width:580px; height:580px;">    
 			<canvas id="chart" style="width: 10vw; height: 10.5vh; background: #222; border: 1px solid #555652; margin-top: 10px;"></canvas>
 
 			<script>
@@ -686,11 +679,7 @@ for (i = 0; i < close.length; i++) {
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
-                options: {
-                  responsive: true,
-                  maintainAspectRatio: true,
-        }
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
 		        }
 		    });
 			</script>
@@ -720,11 +709,7 @@ for (i = 0; i < close.length; i++) {
       options: {
           scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
           tooltips:{mode: 'index'},
-          legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-        }
+          legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
       }
   });
 </script>    
@@ -762,11 +747,7 @@ for (i = 0; i < close.length; i++) {
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
-                options: {
-                   responsive: true,
-                   maintainAspectRatio: false,
-        }
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
 		        }
 		    });
 			</script>
@@ -812,11 +793,7 @@ for (i = 0; i < close.length; i++) {
                 options: {
                     scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
                     tooltips:{mode: 'index'},
-                    legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
-                    options: {
-                      responsive: true,
-                      maintainAspectRatio: false,
-        }
+                    legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
                 }
             });
           </script>
