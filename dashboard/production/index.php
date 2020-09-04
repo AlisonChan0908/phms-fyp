@@ -679,7 +679,11 @@ for (i = 0; i < close.length; i++) {
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+        }
 		        }
 		    });
 			</script>
@@ -709,7 +713,11 @@ for (i = 0; i < close.length; i++) {
       options: {
           scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
           tooltips:{mode: 'index'},
-          legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+          legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        }
       }
   });
 </script>    
@@ -747,7 +755,11 @@ for (i = 0; i < close.length; i++) {
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
+                options: {
+                   responsive: true,
+                   maintainAspectRatio: false,
+        }
 		        }
 		    });
 			</script>
@@ -793,7 +805,11 @@ for (i = 0; i < close.length; i++) {
                 options: {
                     scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
                     tooltips:{mode: 'index'},
-                    legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+                    legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
+                    options: {
+                      responsive: true,
+                      maintainAspectRatio: false,
+        }
                 }
             });
           </script>
