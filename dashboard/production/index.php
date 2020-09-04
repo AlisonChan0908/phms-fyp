@@ -174,7 +174,7 @@ $pa_id = $_SESSION['pa_id'];
         top: 8px;
         left: 8px;
         right: 8px;
-        bottom: 8px;
+        bottom: 8px;}
     </style>
   </head>
 
@@ -689,7 +689,7 @@ for (i = 0; i < close.length; i++) {
 		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}},
                 options: {
                   responsive: true,
-                  maintainAspectRatio: false,
+                  maintainAspectRatio: true,
         }
 		        }
 		    });
