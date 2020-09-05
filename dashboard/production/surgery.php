@@ -257,7 +257,7 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-plus-circle"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="add_surgery_form.php">Add injury record</a>
+                            <a class="dropdown-item" href="add_surgery_form.php">Add surgery record</a>
                            
                           </div>
                       </li>
