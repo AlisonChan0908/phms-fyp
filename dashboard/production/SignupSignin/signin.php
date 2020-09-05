@@ -87,6 +87,10 @@ if (isset($_GET["code"])) {
 
 <head>
     <meta charset="UTF-8">
+    
+  <meta name="description" content="A personal healthcare monitoring system for patients.">
+  <meta name="keywords" content="PHMS, personal healthcare monitoring system, patient monitoring system, patient, physician">
+  <meta name="author" content="Chan Pui Yi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Google API Google Client ID -->
     <meta name="google-signin-client_id" content="719944339176-3noalf2uoj8cjukfcck8u85nfjs0bvj8.apps.googleusercontent.com">
