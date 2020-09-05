@@ -13,6 +13,7 @@ if($link === false){
 $username = $_SESSION['username'];
 $pa_firstname = mysqli_real_escape_string($link, $_REQUEST['pa_firstname']);
 $pa_lastname = mysqli_real_escape_string($link, $_REQUEST['pa_lastname']);
+$pa_ic = mysqli_real_escape_string($link, $_REQUEST['pa_ic']);
 $pa_dob = mysqli_real_escape_string($link, $_REQUEST['pa_dob']);
 $pa_gender = mysqli_real_escape_string($link, $_REQUEST['pa_gender']);
 $pa_maritalstatus = mysqli_real_escape_string($link, $_REQUEST['pa_maritalstatus']);
@@ -30,7 +31,7 @@ $pa_current_occupation = mysqli_real_escape_string($link, $_REQUEST['pa_current_
  
 // Attempt update query execution
 $sql = "UPDATE users
-SET pa_firstname='$pa_firstname', pa_lastname='$pa_lastname', pa_dob='$pa_dob', pa_gender='$pa_gender', pa_maritalstatus='$pa_maritalstatus', pa_children='$pa_children', pa_phone='$pa_phone', pa_address='$pa_address', pa_city='$pa_city', pa_state='$pa_state', pa_zipcode='$pa_zipcode', pa_country='$pa_country', pa_race='$pa_race', pa_current_occupation='$pa_current_occupation'
+SET pa_firstname='$pa_firstname', pa_lastname='$pa_lastname', pa_ic='$pa_ic', pa_dob='$pa_dob', pa_gender='$pa_gender', pa_maritalstatus='$pa_maritalstatus', pa_children='$pa_children', pa_phone='$pa_phone', pa_address='$pa_address', pa_city='$pa_city', pa_state='$pa_state', pa_zipcode='$pa_zipcode', pa_country='$pa_country', pa_race='$pa_race', pa_current_occupation='$pa_current_occupation'
 WHERE username='$username'";
 if(mysqli_query($link, $sql)){
 
