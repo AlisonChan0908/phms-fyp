@@ -3,12 +3,12 @@
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: SignupSignin/signin.php');
+  	header('location: SignupSignin/phys_login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['username']);
-  	header("location: SignupSignin/signin.php");
+  	header("location: SignupSignin/phys_login.php");
   }
 ?>
 
