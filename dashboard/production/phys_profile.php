@@ -1,14 +1,14 @@
 <?php 
   session_start(); 
 
-  if (!isset($_SESSION['username'])) {
+  if (!isset($_SESSION['userid'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: SignupSignin/signin.php');
+  	header('location: Physician/phys_login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location: SignupSignin/signin.php");
+  	unset($_SESSION['userid']);
+  	header("location: Physician/phys_login.php");
   }
 ?>
 <?php
