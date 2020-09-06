@@ -105,7 +105,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="SignupSignin/signin.php">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="Physician/phys_login.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -126,10 +126,10 @@
                       <img src="images/chevrons-down.svg" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="personal_profile.php"> Profile</a>
+                      <a class="dropdown-item"  href="phys_profile.php"> Profile</a>
                         
-                    <a class="dropdown-item"  href="contactus.php">Help</a>
-                      <a class="dropdown-item"  href="SignupSignin/signin.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                 
+                      <a class="dropdown-item"  href="Physician/phys_login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
   
