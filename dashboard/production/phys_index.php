@@ -3,7 +3,7 @@
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: Physician/phys_login.php');
+  	header('location: phys_index.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
