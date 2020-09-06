@@ -87,7 +87,7 @@
 											$_SESSION["userid"]= $_POST["userid"];
 											// $_SESSION["type"]=$result[2];
 											$_SESSION['adminstatus']= "yes";
-										    echo "<script>location.replace('../myDetails.php');</script>";
+										    echo "<script>location.replace('../phys_index.php');</script>";
 												// echo "u are supposed to redirect to ur profile";
 										} else {
 										    echo "<span style='color:red;'>Invalid username or password</span>";
