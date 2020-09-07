@@ -121,7 +121,7 @@ if (isset($_GET["code"])) {
                         <figure><img src="images/undraw_young_and_happy_hfpe.png" alt="sign in image"></figure>
                         <a href="signup.php" class="signup-image-link">Create an account</a>
                         <a href="../../../appco/index.php" class="signup-image-link">Back to homepage</a>
-                        <a href="forgotpass.php" class="signup-image-link">Forgot Password</a>
+                      <!--  <a href="forgotpass.php" class="signup-image-link">Forgot Password</a> -->
                     </div>
 
                     <div class="signin-form">
