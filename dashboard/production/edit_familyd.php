@@ -300,7 +300,7 @@ header("location: familyd.php");
 
 <form method="post">
 
-<label>Disease Name:<span class="required"></span></label><input type="text" name="fam_disease_name"  required="required" value="<?php echo $row['fam_disease_name']; ?>"> ><br/><br/>
+<label>Disease Name:<span class="required"></span></label><input type="text" name="fam_disease_name"  required="required" value="<?php echo $row['fam_disease_name']; ?>"><br/><br/>
 <label>Start Date:<span class="required"></span></label><input type="date" name="fam_disease_startd"  required="required" value="<?php echo $row['fam_disease_startd']; ?>"><br/><br/>
 <label>End Date (if have):</label><input type="date" name="fam_disease_endd"   value="<?php echo $row['fam_disease_endd']; ?>"><br/><br/>
 
