@@ -275,7 +275,8 @@ if (isset($_GET['logout'])) {
                           </thead>
                           <?php
                               $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
-                          $sql="SELECT * FROM lab_results";
+                              $username = $_SESSION['username'];
+                          $sql="SELECT * FROM lab_results WHERE pa_id IN (SELECT pa_id FROM users WHERE username = '$username' ORDER BY uploaded_on)";
                           $result = mysqli_query($link, $sql);
                           while($row=mysqli_fetch_array($result))
                           {
