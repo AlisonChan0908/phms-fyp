@@ -245,7 +245,7 @@
                                             function deleteme(delid)
                                             {
                                             if(confirm("Do you want to Delete!")){
-                                            window.location.href='deleteallergy.php?del_id=' +delid+'';
+                                            window.location.href='deletebooking.php?del_id=' +delid+'';
                                             return true;
                                             }
                                             } 
