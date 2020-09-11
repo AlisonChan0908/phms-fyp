@@ -285,7 +285,7 @@ if (isset($_GET['logout'])) {
                       <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Description <span class="required"></span>
                       </label>
                       <div class="col-md-9 col-sm-9 ">
-                      <textarea class="resizable_textarea form-control" placeholder="Type your description here."></textarea>
+                      <textarea class="resizable_textarea form-control" id="file_description" name="file_description"  placeholder="Type your description here."></textarea>
                     </div>
                     </div>
 
