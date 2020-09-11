@@ -187,7 +187,7 @@
                           <th>Start Time</th>
                           <th>End Time</th>
                           <th>Notes</th>
-                        
+                          <th>Delete</th>
                 
                         </tr>
                       </thead>
@@ -236,7 +236,20 @@
                                     ?>
                                     
                                   
+                                      <!-- Delete Button -->
                                     
+                                      <td><input type="button" onClick="deleteme(<?php echo $row['id']; ?>)" name="Delete" value="Delete"></td>
+                                            
+                                            <!-- Javascript function for deleting data -->
+                                            <script language="javascript">
+                                            function deleteme(delid)
+                                            {
+                                            if(confirm("Do you want to Delete!")){
+                                            window.location.href='deleteallergy.php?del_id=' +delid+'';
+                                            return true;
+                                            }
+                                            } 
+                                            </script>
                                             
 
                                     <?php 
