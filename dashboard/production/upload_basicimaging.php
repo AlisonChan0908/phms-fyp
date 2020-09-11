@@ -106,7 +106,10 @@ if (isset($_GET['logout'])) {
                     $description = $_POST['file_description'];
                     $basic_type = $_POST['basic_type'];
 
-                    $insert = $con->query("INSERT into basic_imaging (pa_id, file_name, selfdeclared_name, file_description, basic_type, uploaded_on) VALUES ($pa_id, '" . $fileName . "', '$inputtedFileName', '$description', '$basic_type', NOW())")  or die($con->error);
+                    $insert = $con->query("INSERT into basic_imaging (pa_id, file_name, selfdeclared_name, file_description, basic_type, uploaded_on) 
+                    VALUES ($pa_id, '" . $fileName . "', '$inputtedFileName', '$description', '$basic_type', NOW())")
+                    
+                    or die($con->error);
 
                     if ($insert) {
                       $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
