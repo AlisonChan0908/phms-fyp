@@ -179,7 +179,8 @@ if (isset($_GET['logout'])) {
 
                 <li><a><i class="fa fa-calendar"></i> Appointments <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="physician_info.php">Bookings</a></li>
+                      <li><a href="physician_info.php">Find a physician</a></li>
+                      <li><a href="appointment_list.php">Appointment List</a></li>
                      
                    
                     </ul>
