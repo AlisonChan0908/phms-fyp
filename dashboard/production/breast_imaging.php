@@ -131,6 +131,8 @@ if (isset($_GET['logout'])) {
                             </li>
                             <li><a href="ir_imaging.php">Interventional Radiology (IR)</a>
                             </li>
+                            <li><a href="nuclear_imaging.php">Nuclear Imaging</a>
+                            </li>
                           </ul>
                         </li>
                     <li><a href="lab_results.php">Laboratory test results</a></li>
