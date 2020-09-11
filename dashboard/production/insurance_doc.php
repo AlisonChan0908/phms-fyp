@@ -154,7 +154,8 @@ if (isset($_GET['logout'])) {
 
                 <li><a><i class="fa fa-calendar"></i> Appointments <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="physician_info.php">Bookings</a></li>
+                      <li><a href="physician_info.php">Find a physician</a></li>
+                      <li><a href="appointment_list.php">Appointment List</a></li>
                      
                    
                     </ul>
@@ -276,8 +277,8 @@ if (isset($_GET['logout'])) {
                           </thead>
                           <?php
                              $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
-
-                          $sql="SELECT * FROM insurance_doc";
+                             $username = $_SESSION['username'];
+                          $sql="SELECT * FROM insurance_doc WHERE pa_id IN (SELECT pa_id FROM users WHERE username = '$username' ORDER BY uploaded_on)";
                           $result = mysqli_query($link, $sql);
                           while($row=mysqli_fetch_array($result))
                           {
