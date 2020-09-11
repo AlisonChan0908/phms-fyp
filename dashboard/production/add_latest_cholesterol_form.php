@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/PHMS.jpg" type="image/ico" />
 	  
-    <title>PHMS | Blood Glucose Form </title>
+    <title>PHMS | Cholesterol Form </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
