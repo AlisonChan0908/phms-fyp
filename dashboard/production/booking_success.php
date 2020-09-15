@@ -68,7 +68,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-              <a href="add_profileimgform.php"> <img src="images/img.jpg" alt="..." class="img-circle profile_img" > </a>
+            
               </div>
               <div class="profile_info">
               <div class="content">
