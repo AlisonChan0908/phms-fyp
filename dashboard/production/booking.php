@@ -282,7 +282,7 @@
             $phys_fullname = $row['phys_fullname'];
           }
           ?>
-                        ?>
+                        
 
             <div class="clearfix"></div>
             <div class="row">
