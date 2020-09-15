@@ -300,7 +300,7 @@ header("location: edit_heightpage.php");
 
 <form method="post">
 
-<label>Date:<span class="required"></span></label><input type="date" name="pa_height_date"  required="required" value="<?php echo $row['pa_height_date']; ?>"><br/><br/>
+<label>Date:<span class="required"></span></label><input type="text" name="pa_height_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" value="<?php echo $row['pa_height_date']; ?>"><br/><br/>
 <label>Time:<span class="required"></span></label><input type="time" name="pa_height_time"  required="required" value="<?php echo $row['pa_height_time']; ?>"><br/><br/>
 <label>Height (in centimeters):<span class="required"></span></label><input type="number" name="pa_height"  required="required" value="<?php echo $row['pa_height']; ?>"><br/><br/>
 
