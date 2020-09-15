@@ -277,6 +277,11 @@
                         $sql = "SELECT * FROM physician WHERE userid = '$userid'";
                         $sql2 = "SELECT phys_fullname FROM physician WHERE userid = '$userid'";
                        
+          if ($result = mysqli_query($link, $sql2)) {
+            $row = $result->fetch_assoc();
+            $phys_fullname = $row['phys_fullname'];
+          }
+          ?>
                         ?>
 
             <div class="clearfix"></div>
@@ -343,6 +348,14 @@
                       </div>
 
                      
+                    <div class="item form-group">
+                      <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Physician Name <span class="required"></span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 ">
+                        <input type="text" id="phys_fullname" name="phys_fullname" required="required" class="form-control" value="<?php echo $phys_fullname; ?>" readonly>
+                      </div>
+                    </div>
+
                     
                      
                       <div class="item form-group">
