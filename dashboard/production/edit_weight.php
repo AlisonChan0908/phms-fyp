@@ -297,7 +297,7 @@ header("location: edit_weightpage.php");
 
 <form method="post">
 
-<label>Date:<span class="required"></span></label><input type="date" name="pa_weight_date"  required="required" value="<?php echo $row['pa_weight_date']; ?>"><br/><br/>
+<label>Date:<span class="required"></span></label><input type="text" name="pa_weight_date"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd/mon/yyyy"  required="required" value="<?php echo $row['pa_weight_date']; ?>"><br/><br/>
 <label>Time:<span class="required"></span></label><input type="time" name="pa_weight_time"  required="required" value="<?php echo $row['pa_weight_time']; ?>"><br/><br/>
 <label>Weight (in kilograms):<span class="required"></span></label><input type="number" name="pa_weight"  required="required" value="<?php echo $row['pa_weight']; ?>"><br/><br/>
 
