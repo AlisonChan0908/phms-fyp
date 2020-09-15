@@ -252,6 +252,33 @@
               
             </div>
             <!-- Booking Form -->
+             <!-- result -->
+<?php 
+  $userid = isset($_GET['userid'])?$_GET['userid']:"";
+
+ ?>               
+                                                  
+                      <?php
+                        /* Attempt MySQL server connection. Assuming you are running MySQL
+                        server with default setting (user 'root' with no password) */
+                        $link = mysqli_connect("us-cdbr-east-02.cleardb.com", "baf5ca15029df6", "8111c740", "heroku_79fc0f987d687d0");
+                        
+                        // Check connection
+                        if($link === false){
+                            die("ERROR: Could not connect. " . mysqli_connect_error());
+                        }
+   
+
+
+	
+                   
+                        // Attempt select query execution
+                        //IN (SELECT pa_id FROM users WHERE pa_username = '$pa_username')";
+                        $sql = "SELECT * FROM physician WHERE userid = '$userid'";
+                        $sql2 = "SELECT phys_fullname FROM physician WHERE userid = '$userid'";
+                       
+                        ?>
+
             <div class="clearfix"></div>
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
@@ -311,20 +338,12 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Physician ID <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="userid" name="userid" required="required" class="form-control">
+                          <input type="text" id="userid" name="userid" required="required" class="form-control" value="<?php echo $userid; ?>" readonly>
                         </div>
                       </div>
 
-
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Physician Name <span class="required"></span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="phys_fullname" name="phys_fullname" required="required" class="form-control">
-                        </div>
-                      </div>
                      
-                     
+                    
                      
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Appointment Date<span class="required"></span>
