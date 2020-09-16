@@ -69,7 +69,7 @@ if (isset($_POST['login_user'])) {
   
     if (count($errors) == 0) {
         $password = md5($password_1);
-        $query = "SELECT * FROM users WHERE username='$username' AND password='MD5($password)'";
+        $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
         $user = mysqli_fetch_assoc($results);
         if (mysqli_num_rows($results) == 1) {
