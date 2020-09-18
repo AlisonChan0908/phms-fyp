@@ -349,7 +349,7 @@
                     <div class="col-xl-12 ">
                         <div class="footer-copy-right">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="ti-heart" aria-hidden="true"></i> by PHMS.
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> PHMS developed by Chan Pui Yi - 17ACB06008
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>
