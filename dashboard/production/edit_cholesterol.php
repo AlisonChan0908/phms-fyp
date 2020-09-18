@@ -305,7 +305,7 @@ header("location: edit_cholesterolpage.php");
 
 <form method="post">
 
-<label>Date:<span class="required"></span></label><input type="text" name="pa_cho_date"  required="required"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy"  value="<?php echo $row['pa_cho_date']; ?>"><br/><br/>
+<label>Date:<span class="required"></span></label><input type="text" name="pa_cho_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['pa_height_date']; ?>"><br/><br/>
 <label>Time:<span class="required"></span></label><input type="time" name="pa_cho_time"  required="required" value="<?php echo $row['pa_cho_time']; ?>"><br/><br/>
 <label>LDL (mg/dL):<span class="required"></span></label><input type="number" name="pa_ldl"  required="required" value="<?php echo $row['pa_ldl']; ?>"><br/><br/>
 <label>HDL (mg/dL):<span class="required"></span></label><input type="number" name="pa_hdl"  required="required" value="<?php echo $row['pa_hdl']; ?>"><br/><br/>
