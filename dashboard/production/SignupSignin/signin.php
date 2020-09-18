@@ -161,7 +161,7 @@ if (isset($_GET["code"])) {
                         </form>
                         <div>
                             <h1><i class="fa fa-lemon-o"></i> PHMS</h1>
-                            <p>©2020 All Rights Reserved. PHMS. Privacy and Terms</p>
+                            <p>©2020 PHMS developed by Chan Pui Yi - 17ACB06008</p>
                         </div>
                     </div>
                 </div>
