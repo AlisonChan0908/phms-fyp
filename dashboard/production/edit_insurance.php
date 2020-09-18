@@ -63,7 +63,7 @@ header("location: insurance.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/PHMS.png" type="image/ico" />
 	  
-    <title>Taro | Insurance Form </title>
+    <title>PHMS | Insurance Form </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
