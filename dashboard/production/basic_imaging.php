@@ -293,7 +293,7 @@ if (isset($_GET['logout'])) {
                               <td><?php echo $row['basic_type'] ?></td>
                               
                               <td><a href="uploads/<?php echo $row['file_name'] ?>" target="_blank">Click to view file</a></td>
-                              <td><?php echo $row['uploaded_on'] ?></td>
+                              <td><?php echo $row['(d/m/Y,strtotime(uploaded_on))'] ?></td>
                                
 
                                  <!-- Delete Button -->
