@@ -763,7 +763,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            PHMS
+          PHMS developed by Chan Pui Yi - 17ACB06008
           </div>
           <div class="clearfix"></div>
         </footer>

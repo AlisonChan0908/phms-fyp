@@ -321,7 +321,7 @@ $pa_id = $_SESSION['pa_id'];
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            PHMS
+          PHMS developed by Chan Pui Yi - 17ACB06008
           </div>
           <div class="clearfix"></div>
         </footer>
