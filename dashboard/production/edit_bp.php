@@ -62,7 +62,7 @@ header("location: edit_bp_page.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/PHMS.png" type="image/ico" />
 	  
-    <title>Taro | Blood Pressure Form </title>
+    <title>PHMS | Blood Pressure Form </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -103,7 +103,7 @@ header("location: edit_bp_page.php");
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-lemon-o"></i> <span>Taro</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-lemon-o"></i> <span>PHMS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -343,7 +343,7 @@ x= "update";
  <!-- footer content -->
  <footer>
           <div class="pull-right">
-           Taro</a>
+          PHMS developed by Chan Pui Yi - 17ACB06008</a>
           </div>
           <div class="clearfix"></div>
         </footer>
