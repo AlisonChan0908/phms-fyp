@@ -303,7 +303,7 @@ header("location: allergy.php");
                           </div><br/><br/>
 <label>Reactions:<span class="required"></span></label><input type="text" name="pa_allergy_reaction" required="required" value="<?php echo $row['pa_allergy_reaction']; ?>" ><br/><br/>
 <label>Treatment:<span class="required"></span></label><input type="text" name="pa_allergy_tx" required="required" value="<?php echo $row['pa_allergy_tx']; ?>"><br/><br/>
-<label>First Observed:</label><input type="date" name="pa_allergy_fo"  value="<?php echo $row['pa_allergy_fo']; ?>"><br/><br/>
+<label>First Observed:</label><input type="text" name="pa_allergy_fo"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['pa_allergy_fo']; ?>"><br/><br/>
 <label>Notes:</label><input type="text" name="pa_allergy_notes"  value="<?php echo $row['pa_allergy_notes']; ?>"><br/><br/>
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
 <a href="allergy.php"><button type="button" value="button">Cancel</button></a>

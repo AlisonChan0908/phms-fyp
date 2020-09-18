@@ -381,8 +381,8 @@ header("location: medications.php");
                           </div><br/><br/>
 
 
-<label>Start Date:<span class="required"></span></label><input type="date" name="pa_med_startd" required="required" value="<?php echo $row['pa_med_startd']; ?>"><br/><br/>
-<label>End Date:</label><input type="date" name="pa_med_endd"  value="<?php echo $row['pa_med_endd']; ?>"><br/><br/>
+<label>Start Date:<span class="required"></span></label><input type="text" name="pa_med_startd" required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['pa_med_startd']; ?>"><br/><br/>
+<label>End Date:</label><input type="text" name="pa_med_endd"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['pa_med_endd']; ?>"><br/><br/>
 <label>Purpose or Reason Taken:<span class="required"></span></label><input type="text" name="pa_med_purpose" required="required" value="<?php echo $row['pa_med_purpose']; ?>"><br/><br/>
 <label>Prescribed By:<span class="required"></span></label><input type="text" name="pa_med_presby" required="required" value="<?php echo $row['pa_med_presby']; ?>"><br/><br/>
 <label>Notes:</label><input type="text" name="pa_med_notes"  value="<?php echo $row['pa_med_notes']; ?>"><br/><br/>

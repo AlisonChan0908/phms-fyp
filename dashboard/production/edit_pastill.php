@@ -302,7 +302,7 @@ header("location: pastill.php");
 
 <label>Illness Name:<span class="required"></span></label><input type="text" name="illness_name"  required="required" value="<?php echo $row['illness_name']; ?>"><br/><br/>
 <label>Duration of Illness:<span class="required"></span></label><input type="number" name="illness_duration"  required="required" value="<?php echo $row['illness_duration']; ?>"><br/><br/>
-<label>First Observed:<span class="required"></span></label><input type="date" name="illness_fo"  required="required" value="<?php echo $row['illness_fo']; ?>"><br/><br/>
+<label>First Observed:<span class="required"></span></label><input type="text" name="illness_fo"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['illness_fo']; ?>"><br/><br/>
 
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>

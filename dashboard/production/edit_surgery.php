@@ -302,7 +302,7 @@ header("location: surgery.php");
 <form method="post">
 
 <label>Procedure Name:<span class="required"></span></label><input type="text" name="pro_name"  required="required" value="<?php echo $row['pro_name']; ?>"><br/><br/>
-<label>Surgery Date:<span class="required"></span></label><input type="date" name="surgery_date"  required="required" value="<?php echo $row['surgery_date']; ?>"><br/><br/>
+<label>Surgery Date:<span class="required"></span></label><input type="text" name="surgery_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['surgery_date']; ?>"><br/><br/>
 <label>Hospital:<span class="required"></span></label><input type="text" name="surgery_hospital"  required="required" value="<?php echo $row['surgery_hospital']; ?>"><br/><br/>
 <label>Surgeon Name:<span class="required"></span></label><input type="text" name="surgeon_name"  required="required" value="<?php echo $row['surgeon_name']; ?>"><br/><br/>
 

@@ -301,8 +301,8 @@ header("location: injury.php");
 <form method="post">
 
 <label>Injury Name:<span class="required"></span></label><input type="text" name="injury_name"  required="required" value="<?php echo $row['injury_name']; ?>"><br/><br/>
-<label>Start Date:<span class="required"></span></label><input type="date" name="injury_start_date"  required="required" value="<?php echo $row['injury_start_date']; ?>"><br/><br/>
-<label>End Date:<span class="required"></span></label><input type="date" name="injury_end_date"  required="required" value="<?php echo $row['injury_end_date']; ?>"><br/><br/>
+<label>Start Date:<span class="required"></span></label><input type="text" name="injury_start_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['injury_start_date']; ?>"><br/><br/>
+<label>End Date:<span class="required"></span></label><input type="text" name="injury_end_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['injury_end_date']; ?>"><br/><br/>
 <label>Treatment Venue (if any)<span class="required"></span></label><input type="text" name="injury_trt_venue"  required="required" value="<?php echo $row['injury_trt_venue']; ?>"><br/><br/>
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>

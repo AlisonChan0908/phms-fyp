@@ -302,8 +302,8 @@ header("location: childd.php");
 <form method="post">
 
 <label>Disease Name:<span class="required"></span></label><input type="text" name="child_disease_name"  required="required" value="<?php echo $row['child_disease_name']; ?>"><br/><br/>
-<label>Start Date:<span class="required"></span></label><input type="date" name="child_disease_startd"  required="required" value="<?php echo $row['child_disease_startd']; ?>"><br/><br/>
-<label>End Date (if have):<span class="required"></span></label><input type="date" name="child_disease_endd"  required="required" value="<?php echo $row['child_disease_endd']; ?>"><br/><br/>
+<label>Start Date:<span class="required"></span></label><input type="text" name="child_disease_startd"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['child_disease_startd']; ?>"><br/><br/>
+<label>End Date (if have):<span class="required"></span></label><input type="text" name="child_disease_endd"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['child_disease_endd']; ?>"><br/><br/>
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
 <a href="childd.php"><button type="button" value="button">Cancel</button></a>

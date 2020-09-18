@@ -302,8 +302,8 @@ header("location: hospitalization.php");
 
 <form method="post">
 
-<label>Start Date:<span class="required"></span></label><input type="date" name="hos_start_date"  required="required" value="<?php echo $row['hos_start_date']; ?>"><br/><br/>
-<label>End Date:<span class="required"></span></label><input type="date" name="hos_end_date"  required="required" value="<?php echo $row['hos_end_date']; ?>"><br/><br/>
+<label>Start Date:<span class="required"></span></label><input type="text" name="hos_start_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['hos_start_date']; ?>"><br/><br/>
+<label>End Date:<span class="required"></span></label><input type="text" name="hos_end_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['hos_end_date']; ?>"><br/><br/>
 <label>Reason of Hospitalization:<span class="required"></span></label><input type="text" name="hos_reason"  required="required" value="<?php echo $row['hos_reason']; ?>"><br/><br/>
 <label>Hospital Name:<span class="required"></span></label><input type="text" name="hos_venue"  required="required" value="<?php echo $row['hos_venue']; ?>"><br/><br/>
 

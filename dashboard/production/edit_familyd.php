@@ -301,8 +301,8 @@ header("location: familyd.php");
 <form method="post">
 
 <label>Disease Name:<span class="required"></span></label><input type="text" name="fam_disease_name"  required="required" value="<?php echo $row['fam_disease_name']; ?>"><br/><br/>
-<label>Start Date:<span class="required"></span></label><input type="date" name="fam_disease_startd"  required="required" value="<?php echo $row['fam_disease_startd']; ?>"><br/><br/>
-<label>End Date (if have):</label><input type="date" name="fam_disease_endd"   value="<?php echo $row['fam_disease_endd']; ?>"><br/><br/>
+<label>Start Date:<span class="required"></span></label><input type="text" name="fam_disease_startd"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['fam_disease_startd']; ?>"><br/><br/>
+<label>End Date (if have):</label><input type="text" name="fam_disease_endd"   pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['fam_disease_endd']; ?>"><br/><br/>
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>
 <a href="familyd.php"><button type="button" value="button">Cancel</button></a>

@@ -302,7 +302,7 @@ header("location: immunization.php");
 
 <form method="post">
 
-<label>Date of Received:<span class="required"></span></label><input type="date" name="pa_immu_date"  required="required" value="<?php echo $row['pa_immu_date']; ?>"><br/><br/>
+<label>Date of Received:<span class="required"></span></label><input type="text" name="pa_immu_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['pa_immu_date']; ?>"><br/><br/>
 <label>Immunization:<span class="required"></span></label><input type="text" name="pa_immu_name"  required="required" value="<?php echo $row['pa_immu_name']; ?>"><br/><br/>
 <label for="pa_immu_bodypart">Where on the Body Part:</label> <div>
                           
