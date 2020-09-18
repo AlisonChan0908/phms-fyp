@@ -113,7 +113,14 @@
 
 <script src="../../js/bootstrap.min.js"></script>
 
- 
+       <!-- footer content -->
+	   <footer>
+            <div class="pull-right">
+            PHMS developed by Chan Pui Yi - 17ACB06008</a>
+            </div>
+            <div class="clearfix"></div>
+          </footer>
+          <!-- /footer content -->
 	
   </body>
 </html>
