@@ -270,7 +270,7 @@
                           <th>Start Date</th>
                           <th>End Date</th>
                           <th>Treatment Venue (if any)</th>
-                          <th>Duration of Recovery</th>
+                    <!--      <th>Duration of Recovery</th> -->
                           <th>Edit</th> 
                           <th>Delete Record</th>   
                                 
@@ -312,7 +312,7 @@
                                     echo "<td>" . $row['injury_start_date'] . "</td>";
                                     echo "<td>" . $row['injury_end_date'] . "</td>";
                                     echo "<td>" . $row['injury_trt_venue'] . "</td>";
-                                    echo "<td>" . $row['injury_rec_duration'] . "</td>";
+                               //     echo "<td>" . $row['injury_rec_duration'] . "</td>";
                                     
                                    ;
                                     

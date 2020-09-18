@@ -281,7 +281,7 @@ header("location: phys_schedule.php");
 
 <form method="post">
 
-<label>Date:<span class="required"></span></label><input type="date" name="schedule_date"  required="required" value="<?php echo $row['schedule_date']; ?>"><br/><br/>
+<label>Date:<span class="required"></span></label><input type="text" name="schedule_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['schedule_date']; ?>"><br/><br/>
 <label for="schedule_day">Day:</label> <div>
                           
                           <select class="form-control" id="schedule_day" name="schedule_day" required>

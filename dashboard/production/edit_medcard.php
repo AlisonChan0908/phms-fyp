@@ -296,8 +296,8 @@ header("location: medcard.php");
 <label>Annual Limit (AL):</label><input type="text" name="annual_limit"  value="<?php echo $row['annual_limit']; ?>"><br/><br/>
 <label>Lifetime Limit(LL):</label><input type="text" name="lifetime_limit"  value="<?php echo $row['lifetime_limit']; ?>"><br/><br/>
 <label>Claim Frequency (projected):</label><input type="text" name="claim_frequency"  value="<?php echo $row['claim_frequency']; ?>"><br/><br/>
-<label>Subscription Date:</label><input type="date" name="subs_date"  value="<?php echo $row['subs_date']; ?>"><br/><br/>
-<label>Expiry Date:</label><input type="date" name="exp_date"  value="<?php echo $row['exp_date']; ?>"><br/><br/>
+<label>Subscription Date:</label><input type="text" name="subs_date"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['subs_date']; ?>"><br/><br/>
+<label>Expiry Date:</label><input type="text" name="exp_date"  pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['exp_date']; ?>"><br/><br/>
 
 
 <button type="submit" name="btn-update" id="btn-update" onClick="update()"><strong>Update</strong></button>

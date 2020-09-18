@@ -280,7 +280,7 @@
                           <th>Start Date</th>
                           <th>End Date</th>
                           <th>Reason of hospitalization</th>
-                          <th>Duration (if have)</th>    
+                 <!--         <th>Duration (if have)</th>    -->
                           <th>Hospital Name</th>
                           <th>Edit</th>
                           <th>Delete Record</th>         
@@ -321,7 +321,7 @@
                                     echo "<td>" . $row['hos_start_date'] . "</td>";
                                     echo "<td>" . $row['hos_end_date'] . "</td>";
                                     echo "<td>" . $row['hos_reason'] . "</td>";
-                                    echo "<td>" . $row['hos_duration'] . "</td>";
+                          //          echo "<td>" . $row['hos_duration'] . "</td>";
                                     echo "<td>" . $row['hos_venue'] . "</td>";
                                    ;
                                     

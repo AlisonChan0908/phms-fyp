@@ -307,8 +307,8 @@ header("location: insurance.php");
 <label>Insurance Company:<span class="required"></span></label><input type="text" name="insur_prov_name"  required="required" value="<?php echo $row['insur_prov_name']; ?>"><br/><br/>
 <label>Plan Code:<span class="required"></span></label><input type="text" name="insur_plan_code"  required="required" value="<?php echo $row['insur_plan_code']; ?>"><br/><br/>
 <label>Plan Name:<span class="required"></span></label><input type="text" name="insur_plan_name"  required="required" value="<?php echo $row['insur_plan_name']; ?>"><br/><br/>
-<label>Subscription Date:<span class="required"></span></label><input type="date" name="insur_subs_date"  required="required" value="<?php echo $row['insur_subs_date']; ?>"><br/><br/>
-<label>Expiry Date:<span class="required"></span></label><input type="date" name="insur_exp_date"  required="required" value="<?php echo $row['insur_exp_date']; ?>"><br/><br/>
+<label>Subscription Date:<span class="required"></span></label><input type="text" name="insur_subs_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['insur_subs_date']; ?>"><br/><br/>
+<label>Expiry Date:<span class="required"></span></label><input type="text" name="insur_exp_date"  required="required" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy" value="<?php echo $row['insur_exp_date']; ?>"><br/><br/>
 <label for="insur_coverage_type">Coverage Type:</label> <div>
                           
                           <select class="form-control" id="insur_coverage_type" name="insur_coverage_type" required>

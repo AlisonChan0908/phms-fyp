@@ -323,14 +323,14 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Subscription Date <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="date" id="subs_date" name="subs_date" required="required" class="form-control">
+                          <input type="text" id="subs_date" name="subs_date" required="required" class="form-control" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Expiry Date <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="date" id="exp_date" name="exp_date" required="required" class="form-control">
+                          <input type="text" id="exp_date" name="exp_date" required="required" class="form-control" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy">
                         </div>
                       </div>
                       

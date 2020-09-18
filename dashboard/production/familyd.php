@@ -281,7 +281,7 @@
                           <th>Disease Name</th>
                           <th>Start Date</th>
                           <th>End Date (if have)</th>
-                          <th>Duration (in years)</th>  
+                      <!--    <th>Duration (in years)</th> -->  
                           <th>Edit</th>          
                           <th>Delete Record</th> 
                         </tr>
@@ -320,7 +320,7 @@
                                     echo "<td>" . $row['fam_disease_name'] . "</td>";
                                     echo "<td>" . $row['fam_disease_startd'] . "</td>";
                                     echo "<td>" . $row['fam_disease_endd'] . "</td>";
-                                    echo "<td>" . $row['fam_disease_duration'] . "</td>";
+                                  //  echo "<td>" . $row['fam_disease_duration'] . "</td>";
                                    ;
                                     
                                    ?>
