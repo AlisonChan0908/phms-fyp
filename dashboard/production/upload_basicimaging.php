@@ -107,8 +107,8 @@ if (isset($_GET['logout'])) {
                     $basic_type = $_POST['basic_type'];
 
                     $insert = $con->query("INSERT into basic_imaging (pa_id, file_name, selfdeclared_name, file_description, basic_type, uploaded_on) 
-                    VALUES ($pa_id, '" . $fileName . "', '$inputtedFileName', '$description', '$basic_type', ('d/m/Y',strtotime(NOW()))")
-               
+                    VALUES ($pa_id, '" . $fileName . "', '$inputtedFileName', '$description', '$basic_type', NOW())")
+                    
                     or die($con->error);
 
                     if ($insert) {
