@@ -282,7 +282,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Start Date<span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="date" id="fam_disease_startd" name="fam_disease_startd" required="required" class="form-control">
+                          <input type="text" id="fam_disease_startd" name="fam_disease_startd" required="required" class="form-control" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy">
                         </div>
                       </div>
 
@@ -290,7 +290,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">End Date (if have)<span></span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="date" id="fam_disease_endd" name="fam_disease_endd"  class="form-control">
+                          <input type="text" id="fam_disease_endd" name="fam_disease_endd"  class="form-control" pattern="^(([0-9])|([0-2][0-9])|([3][0-1]))\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\-\d{4}$" placeholder="dd-mon-yyyy">
                         </div>
                       </div>
                       
